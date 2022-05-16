@@ -1,7 +1,7 @@
 @extends('layouts.auth')
   
 @section('content')
-<main class="login-form">
+<main class="login-form mt-5">
   <div class="cotainer">
       <div class="row justify-content-center">
           <div class="col-md-8">

@@ -1,5 +1,10 @@
 @extends('layouts.admin')
-
+@section('kelas')
+<?php $kelas="active"?>
+@endsection
+@section('data-kelas')
+active
+@endsection
 @section('content')
 
 <div class="pagetitle">

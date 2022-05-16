@@ -1,4 +1,10 @@
 @extends('layouts.admin')
+@section('mapel')
+<?php $mapel="active"?>
+@endsection
+@section('data-mapel')
+active
+@endsection
 
 @section('content')
 

@@ -1,5 +1,7 @@
 @extends('layouts.admin')
-
+@section('dashboard')
+<?php $dashboard="active"?>
+@endsection
 @section('content')
 
 <div class="pagetitle">

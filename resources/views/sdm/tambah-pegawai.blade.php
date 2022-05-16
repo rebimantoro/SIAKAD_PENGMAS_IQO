@@ -1,5 +1,10 @@
 @extends('layouts.admin')
-
+@section('sdm')
+<?php $sdm="active"?>
+@endsection
+@section('tambah-pegawai')
+active
+@endsection
 @section('content')
 
 <div class="pagetitle">

@@ -1,5 +1,7 @@
 @extends('layouts.admin')
-
+@section('penilaian')
+<?php $penilaian="active"?>
+@endsection
 @section('content')
 
 <div class="pagetitle">
@@ -30,6 +32,7 @@
                             <li>Pilih Mata Pelajaran,</li>
                             <li>Pilih File Yang Sudah di Edit sebelumnya ,</li>
                             <li>Kemudian Klik Upload, Untuk mengupload File.</li>
+                            <li>Terakhir input nilai akhir dari periode penilaian terkait mata pelajaran.</li>
                         </ol>
                     </div>
                     <div class="row px-2 mb-3">
@@ -104,7 +107,11 @@
                             <div class="row px-2 mb-3">
                                 <div class="col-md-6 ">
                                     <label for="level">Upload Data Nilai</label>
-                                    <input type="file" class="form-control" id="foto" required>
+                                    <input type="file" class="form-control" id="pdf_nilai" required>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <label for="level">Nilai Akhir (Pada Periode Terkait)</label>
+                                    <input type="text" class="form-control" id="nilai_akhir" required>
                                 </div>
                             </div>
 

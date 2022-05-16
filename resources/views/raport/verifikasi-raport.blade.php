@@ -1,5 +1,10 @@
 @extends('layouts.admin')
-
+@section('raport')
+<?php $raport="active"?>
+@endsection
+@section('verifikasi-raport')
+active
+@endsection
 @section('content')
 
 <div class="pagetitle">

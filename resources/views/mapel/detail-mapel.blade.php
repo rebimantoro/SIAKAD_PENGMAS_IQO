@@ -1,5 +1,10 @@
 @extends('layouts.admin')
-
+@section('mapel')
+<?php $mapel="active"?>
+@endsection
+@section('tambah-mapel')
+active
+@endsection
 @section('content')
 
 <div class="pagetitle">
