@@ -89,7 +89,7 @@ class AuthController extends Controller
 
     /**
      * Write code on Method
-     *
+     *  
      * @return response()
      */
     public function create(array $data)
