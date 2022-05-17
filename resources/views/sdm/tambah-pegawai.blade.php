@@ -367,6 +367,16 @@ active
                         <h4 class="fw-bolder mt-2 ps-2 " style="color:#367FA9; float:left; font-size:18px;">Informasi Kartu Keluarga</h4>
                         <br><br>
                             <div class="row px-2 mb-2">
+                                <div class="col-md-6">
+                                    <label for="nik">NIK</label>
+                                    <input type="number" class="form-control" id="nik" name="nik" required placeholder="Masukkan No NIK">
+                                </div>
+                                <div class="col-md-6 ">
+                                    <label for="jumlah-anggota-keluarga">Jumlah Anggota Keluarga</label>
+                                    <input type="text" class="form-control" id="jumlah-anggota-keluarga" required name="jumlah-anggota-keluarga" placeholder="Masukkan Jumlah Anggota Keluarga">
+                                </div>
+                            </div>
+                            <div class="row px-2 mb-2">
                                 <div class="col-md-6 ">
                                     <label for="alamat">Alamat</label>
                                     <input type="text" class="form-control" id="blok" name="blok" required placeholder="Masukkan blok/jalan">
@@ -408,10 +418,7 @@ active
                             </div>
                         
                         <div class="row px-2 mb-2">
-                                <div class="col-md-6 ">
-                                    <label for="jumlah-anggota-keluarga">Jumlah Anggota Keluarga</label>
-                                    <input type="text" class="form-control" id="jumlah-anggota-keluarga" required name="jumlah-anggota-keluarga" placeholder="Masukkan Jumlah Anggota Keluarga">
-                                </div>
+                                
                             </div>
 
                             </div>
