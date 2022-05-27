@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminKelasController;
+use App\Http\Controllers\AdminKepegawaianController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 /*
@@ -34,6 +36,7 @@ Route::get('/SDM/data-pegawai', function () {
 Route::get('/SDM/tambah-pegawai', function () {
     return view('sdm.tambah-pegawai');
 })->name('tambah-pegawai');
+Route::post('/SDM/tambah-pegawai', [AdminKepegawaianController::class, 'createDataPegawai'])->name('tambah-pegawai');
 
 // kelas
 Route::get('/kelas/data-kelas', function () {
@@ -45,6 +48,7 @@ Route::get('/kelas/tambah-kelas', function () {
 Route::get('/kelas/data-kelas/detail', function () {
     return view('kelas.detail-kelas');
 })->name('detail-kelas');
+Route::post('/kelas/tambah-kelas', [AdminKurikulumController::class, 'createKelas'])->name('tambah-kelas');
 
 // mapel
 Route::get('/mapel/data-mapel', function () {
@@ -59,6 +63,7 @@ Route::get('/mapel/data-mapel/detail', function () {
 Route::get('/mapel/plotting-mapel', function () {
     return view('mapel.plotting-mapel');
 })->name('plotting-mapel');
+Route::post('/mapel/tambah-mapel', [AdminKurikulumController::class, 'createMapel'])->name('tambah-mapel');
 
 // siswa
 Route::get('/siswa/data-siswa', function () {

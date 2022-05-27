@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class DataPegawai extends Model
-{
+{   
+    protected $table = 'data_pegawai';
     use HasFactory;
 
     protected $fillable = 
@@ -21,7 +22,7 @@ class DataPegawai extends Model
         'jenis_kelamin',
         'gol_darah',
         'alamat',
-        'provisni',
+        'provinsi',
         'kabupaten_kota',
         'kecamatan',
         'kelurahan',
@@ -39,13 +40,21 @@ class DataPegawai extends Model
         'level_user',
         'status_pegawai',
         'email',
-        'foto'
+        'foto',
+        'ktp',
+        'kk',
+        'ijazah',
+        'skck',
+        'surat_keterangan_dokter',
+        'surat_rekomendasi_kerja',
+        'sertifikat_keahlian',
+        'kartu_kuning',
+        'npwp'
+
     ];
 
-    // alamat belongs to kartu keluarga
-    public function kartu_keluarga(): \Illuminate\Database\Eloquent\Relations\BelongsTo
-    {
-        return $this->belongsTo(KartuKeluarga::class, 'alamat', 'alamat');
+    public function nama_plotting() {
+        return $this->hasMany('App\Models\Plotting', 'guru', 'nama');
     }
 
 }
