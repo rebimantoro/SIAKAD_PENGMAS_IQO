@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminKelasController;
 use App\Http\Controllers\AdminKepegawaianController;
+use App\Http\Controllers\AdminKurikulumController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 /*
@@ -30,25 +31,28 @@ Route::get('/home', function () {
 })->name('home');
 
 // sdm
-Route::get('/SDM/data-pegawai', function () {
-    return view('sdm.data-pegawai');
-})->name('data-pegawai');
+// Route::get('/SDM/data-pegawai', function () {
+//     return view('sdm.data-pegawai');
+// })->name('data-pegawai');
 Route::get('/SDM/tambah-pegawai', function () {
     return view('sdm.tambah-pegawai');
 })->name('tambah-pegawai');
 Route::post('/SDM/tambah-pegawai', [AdminKepegawaianController::class, 'createDataPegawai'])->name('tambah-pegawai');
+Route::get('/SDM/data-pegawai', [AdminKepegawaianController::class, 'showDataPegawai'])->name('data-pegawai');
 
 // kelas
-Route::get('/kelas/data-kelas', function () {
-    return view('kelas.data-kelas');
-})->name('data-kelas');
+// Route::get('/kelas/data-kelas', function () {
+//     return view('kelas.data-kelas');
+// })->name('data-kelas');
 Route::get('/kelas/tambah-kelas', function () {
     return view('kelas.tambah-kelas');
 })->name('tambah-kelas');
 Route::get('/kelas/data-kelas/detail', function () {
     return view('kelas.detail-kelas');
 })->name('detail-kelas');
+Route::get('/kelas/tambah-kelas', [AdminKurikulumController::class, 'kelas'])->name('tambah-kelas');
 Route::post('/kelas/tambah-kelas', [AdminKurikulumController::class, 'createKelas'])->name('tambah-kelas');
+Route::get('/kelas/data-kelas', [AdminKurikulumController::class, 'showKelas'])->name('data-kelas');
 
 // mapel
 Route::get('/mapel/data-mapel', function () {
@@ -60,10 +64,13 @@ Route::get('/mapel/tambah-mapel', function () {
 Route::get('/mapel/data-mapel/detail', function () {
     return view('mapel.detail-mapel');
 })->name('detail-mapel');
-Route::get('/mapel/plotting-mapel', function () {
-    return view('mapel.plotting-mapel');
-})->name('plotting-mapel');
-Route::post('/mapel/tambah-mapel', [AdminKurikulumController::class, 'createMapel'])->name('tambah-mapel');
+// Route::get('/mapel/plotting-mapel', function () {
+//     return view('mapel.plotting-mapel');
+// })->name('plotting-mapel');
+
+Route::get('/mapel/plotting-mapel', [AdminKurikulumController::class, 'plotting'])->name('plotting-mapel');
+Route::post('/mapel/tambah-mapel', [AdminKurikulumController::class, 'createMataPelajaran'])->name('tambah-mapel');
+Route::post('/mapel/plotting-mapel', [AdminKurikulumController::class, 'createPlottingPelajaran'])->name('plotting-mapel');
 
 // siswa
 Route::get('/siswa/data-siswa', function () {

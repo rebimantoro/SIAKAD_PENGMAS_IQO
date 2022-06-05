@@ -14,7 +14,7 @@ class CreateRiwayatPendidikan extends Migration
     public function up()
     {
         Schema::create('riwayat_pendidikan', function (Blueprint $table) {
-            $table->string('nama_pegawai');
+            $table->unsignedInteger('id_user');
             $table->string('nama_sd');
             $table->string('kota_sd');
             $table->string('tahunlulus_sd');
@@ -62,9 +62,10 @@ class CreateRiwayatPendidikan extends Migration
             $table->string('jurusan_s3');
             $table->timestamps();
 
-            $table->foreign('nama_pegawai')
-                ->references('nama_pegawai')
-                ->on('data_pegawai');
+            $table->foreign('id_user')
+                ->references('id')
+                ->on('data_pegawai')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

@@ -14,15 +14,16 @@ class CreatePengalamanBekerja extends Migration
     public function up()
     {
         Schema::create('pengalaman_bekerja', function (Blueprint $table) {
-            $table->string('nama_pegawai');
+            $table->unsignedInteger('id_user');
             $table->string('periode');
             $table->string('tempat');
             $table->string('posisi');
             $table->timestamps();
 
-            $table->foreign('nama_pegawai')
-                ->references('nama_pegawai')
-                ->on('data_pegawai');
+            $table->foreign('id_user')
+                ->references('id')
+                ->on('data_pegawai')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

@@ -14,11 +14,12 @@ class CreateDataPegawai extends Migration
     public function up()
     {
         Schema::create('data_pegawai', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('nik_sekolah');
             $table->integer('nik_dt');
             $table->integer('nuptk');
             $table->integer('no_ktp');
-            $table->string('nama_pegawai')->primary();
+            $table->string('nama_pegawai');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->string('jenis_kelamin');

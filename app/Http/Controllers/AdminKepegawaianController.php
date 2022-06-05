@@ -8,6 +8,7 @@ use App\Models\KartuKeluarga;
 use App\Models\RiwayatPendidikan;
 use App\Models\PengalamanBekerja;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 
 class AdminKepegawaianController extends Controller
@@ -51,7 +52,7 @@ class AdminKepegawaianController extends Controller
             'level' => 'required',
             'status_aktif' => 'required',
             'email' => 'required',
-            'foto' => '',
+            'foto' => 'required', 'mimes:jpg,jpeg,png',
             'check-ktp' => '',
             'check-kk' => '',
             'check-ijazah' => '',
@@ -148,21 +149,28 @@ class AdminKepegawaianController extends Controller
         $dataPegawai->no_hp2 = $request->input('no_hp2');
         $dataPegawai->tgl_masuk = $request->input('masuk');
         $dataPegawai->status_aktif = $request->input('status_aktif');
+        $dataPegawai->kontrak_kerja = $request->input('kontrak');
+        $dataPegawai->bagian = $request->input('bagian');
+        $dataPegawai->jabatan_utama = $request->input('jabatan-utama');
+        $dataPegawai->jabatan_kedua = $request->input('jabatan-kedua');
+        $dataPegawai->level_user = $request->input('level');
+        $dataPegawai->status_pegawai = $request->input('status-pegawai');
         $dataPegawai->email = $request->input('email');
-        // $dataPegawai->foto = $request->input('foto');
         $dataPegawai->ktp = $request->input('check-ktp');
         $dataPegawai->kk = $request->input('check-kk');
         $dataPegawai->ijazah = $request->input('check-ijazah');
         $dataPegawai->skck = $request->input('check-skck');
         $dataPegawai->surat_keterangan_dokter = $request->input('check-skd');
-        $dataPegawai->surat_rekomendasi_kerja = $request->input('check-skr');
+        $dataPegawai->surat_rekomendasi_kerja = $request->input('check-srk');
         $dataPegawai->sertifikat_keahlian = $request->input('check-sr');
         $dataPegawai->kartu_kuning = $request->input('check-kuning');
         $dataPegawai->npwp = $request->input('check-npwp');
+        $dataPegawai->foto = Storage::disk('public')->put('product', $request->file('foto'));
         $dataPegawai->save();
 
         // KARTU KELUARGA MODEL
         $kartuKeluarga = new KartuKeluarga;
+        $kartuKeluarga->id_user = $dataPegawai->id;
         $kartuKeluarga->nik = $request->input('nik');
         $kartuKeluarga->alamat = $request->input('alamat');
         $kartuKeluarga->rt = $request->input('rt');
@@ -177,6 +185,7 @@ class AdminKepegawaianController extends Controller
 
         // RIWAYAT PENDIDIKAN MODEL
         $riwayatPendidikan = new RiwayatPendidikan;
+        $riwayatPendidikan->id_user = $dataPegawai->id;
         $riwayatPendidikan->nama_sd = $request->input('nama-sd');
         $riwayatPendidikan->kota_sd = $request->input('kota-sd');
         $riwayatPendidikan->tahunlulus_sd = $request->input('tahunlulus-sd');
@@ -226,11 +235,27 @@ class AdminKepegawaianController extends Controller
 
         // PENGALAMAN KERJA MODEL
         $pengalamanBekerja = new PengalamanBekerja;
+        $pengalamanBekerja->id_user = $dataPegawai->id;
         $pengalamanBekerja->periode = $request->input('periode');
         $pengalamanBekerja->tempat = $request->input('tempat');
         $pengalamanBekerja->posisi = $request->input('posisi');
         $pengalamanBekerja->save();
         return redirect()->back()->with('success', 'Data Pegawai berhasil ditambahkan');
+    }
+
+    /**
+     * Display all pegawai
+     *
+     * 
+     * @return Response
+     */
+    public function showDataPegawai(Request $request) {
+
+        // show data pegawai with specific collumn
+        $dataPegawai = DataPegawai::all();
+        return view('sdm.data-pegawai', compact('dataPegawai'));
+        // return $dataPegawai;
+
     }
 
 }

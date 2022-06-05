@@ -14,7 +14,7 @@ class CreateKartuKeluarga extends Migration
     public function up()
     {
         Schema::create('kartu_keluarga', function (Blueprint $table) {
-            $table->string('nama_pegawai');
+            $table->unsignedInteger('id_user');
             $table->string('nik');
             $table->string('alamat');
             $table->string('rt');
@@ -27,9 +27,10 @@ class CreateKartuKeluarga extends Migration
             $table->integer('jumlah_anggota_kk');
             $table->timestamps();
             
-            $table->foreign('nama_pegawai')
-                ->references('nama_pegawai')
-                ->on('data_pegawai');
+            $table->foreign('id_user')
+                ->references('id')
+                ->on('data_pegawai')
+                ->onDelete('cascade')->onUpdate('cascade');
     });
 }
 

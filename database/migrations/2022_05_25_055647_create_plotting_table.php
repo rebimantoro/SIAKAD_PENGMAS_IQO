@@ -14,27 +14,31 @@ class CreatePlottingTable extends Migration
     public function up()
     {
         Schema::create('plotting', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedInteger('id_kelas');
+            $table->unsignedInteger('id_mapel');
+            $table->unsignedInteger('id_guru');
             $table->string('hari');
-            $table->string('kelas');
+            // $table->string('kelas');
             $table->string('periode');
             $table->string('jam');
-            $table->string('mapel');
-            $table->string('guru');
+            // $table->string('mapel');
+            // $table->string('guru');
             $table->timestamps();
 
-            $table->foreign('kelas')
-                ->references('nama_kelas')
-                ->on('kelas');
+            $table->foreign('id_kelas')
+                ->references('id')
+                ->on('kelas')
+                ->onDelete('cascade')->onUpdate('cascade');
 
-            $table->foreign('mapel')
-                ->references('nama_mapel')
-                ->on('mata_pelajaran');
+            $table->foreign('id_mapel')
+                ->references('id')
+                ->on('mata_pelajaran')
+                ->onDelete('cascade')->onUpdate('cascade');
 
-            $table->foreign('guru')
-                ->references('nama_pegawai')
-                ->on('data_pegawai');
-
+            $table->foreign('id_guru')
+                ->references('id')
+                ->on('data_pegawai')
+                ->onDelete('cascade')->onUpdate('cascade');
 
         });
     }

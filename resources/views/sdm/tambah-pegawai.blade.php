@@ -26,7 +26,7 @@
     
     @if ($errors->any())
     <div class="alert alert-danger border-left-danger" role="alert">
-        <ul class="pl-4 my-2">
+        <ul class="pl-4 my-2">kon
             @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
             @endforeach
@@ -255,7 +255,7 @@
                                     <div class="row px-2 mb-2">
                                         <div class="col-md-6 ">
                                             <label for="kontrak">Kontrak Kerja</label>
-                                            <select class="form-select" aria-label="Pilih Kontrak Kerja">
+                                            <select name="kontrak" class="form-select" aria-label="Pilih Kontrak Kerja">
                                                 <option selected>-- Pilih Kontrak Kerja --</option>
                                                 <option value="yayasan">Kontrak Yayasan</option>
                                                 <option value="training">Training</option>
@@ -267,7 +267,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="bagian">Bagian</label>
-                                            <select class="form-select" aria-label="Pilih Bagian">
+                                            <select name="bagian" class="form-select" aria-label="Pilih Bagian">
                                                 <option selected>-- Pilih Bagian --</option>
                                                 <option value="humas">Humas</option>
                                                 <option value="kesiswaa">Kesiswaan</option>
@@ -301,8 +301,8 @@
                                                 placeholder="Masukkan Level User"  name="level">
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="status-aktif">Status Aktif</label>
-                                            <select class="form-select" aria-label="Pilih Status Aktif">
+                                            <label for="status-aktif">Status Pegawai</label>
+                                            <select name="status-pegawai" class="form-select" aria-label="Pilih Status Pegawai">
                                                 <option selected>-- Pilih Status Aktif --</option>
                                                 <option value="ia">I/a (Juru Muda)</option>
                                                 <option value="ib">I/b (Juru Muda Tingkat 1)</option>
@@ -339,63 +339,63 @@
                                                 <div class="col-sm-10">
                                                     <label><strong>Kelengkapan</strong></label>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="check-ktp">
+                                                        <input name="check-ktp" class="form-check-input" type="checkbox" id="check-ktp">
                                                         <label class="form-check-label" for="check-ktp">
                                                             KTP
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="check-kk">
+                                                        <input name="check-kk" class="form-check-input" type="checkbox" id="check-kk">
                                                         <label class="form-check-label" for="check-kk">
                                                             KK
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="check-ijazah">
+                                                        <input name="check-ijazah" class="form-check-input" type="checkbox" id="check-ijazah">
                                                         <label class="form-check-label" for="check-ijazah">
                                                             Ijazah
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="check-skck">
+                                                        <input name="check-skck" class="form-check-input" type="checkbox" id="check-skck">
                                                         <label class="form-check-label" for="check-skck">
                                                             SKCK
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="check-skd">
+                                                        <input name="check-skd" class="form-check-input" type="checkbox" id="check-skd">
                                                         <label class="form-check-label" for="check-skd">
                                                             Surat Keterangan Dokter
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="check-srk">
+                                                        <input name="check-srk" class="form-check-input" type="checkbox" id="check-srk">
                                                         <label class="form-check-label" for="check-srk">
                                                             Surat Rekomendasi Kerja
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="check-sr">
+                                                        <input name="check-sr" class="form-check-input" type="checkbox" id="check-sr">
                                                         <label class="form-check-label" for="check-sr">
                                                             Sertifikay Keahlian
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="check-kuning">
+                                                        <input name="check-kuning" class="form-check-input" type="checkbox" id="check-kuning">
                                                         <label class="form-check-label" for="check-kuning">
                                                             Kartu Kuning
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" id="check-npwp">
+                                                        <input name="check-npwp" class="form-check-input" type="checkbox" id="check-npwp">
                                                         <label class="form-check-label" for="check-npwp">
                                                             NPWP
                                                         </label>

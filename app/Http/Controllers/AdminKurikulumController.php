@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DataPegawai;
 use App\Models\Kelas;
 use App\Models\MataPelajaran;
+use App\Models\Plotting;
 use Illuminate\Http\Request;
-
-
 
 class AdminKurikulumController extends Controller
 {
@@ -50,6 +50,28 @@ class AdminKurikulumController extends Controller
     }
 
     /**
+     * Show Kelas
+     * 
+     * @return Response
+     */
+    public function kelas() {
+        $pegawai = DataPegawai::all();
+        // dd($pegawai);
+        return view('kelas.tambah-kelas', compact('pegawai'));
+    }
+
+    /**
+     * Show Kelas
+     * 
+     * @return Response
+     */
+    public function showKelas() {
+        $kelas1 = Kelas::get();
+        // dd($kelas);
+        return view('kelas.data-kelas', compact('kelas1'));
+    }
+
+    /**
      * Admin Kurikulum Create Mata Pelajaran
      * 
      * @return Response
@@ -70,5 +92,55 @@ class AdminKurikulumController extends Controller
         $mapel->desc_mapel = $request->input('desc_mapel');
         $mapel->status_mapel = $request->input('status_mapel');
         $mapel->save();
+
+        return redirect()->back()->with('success', 'Mata Pelajaran berhasil ditambahkan');
+    }
+
+    /**
+     * Admin Kurikulum Create Plotting Pelajaran
+     * 
+     * @return Response
+     */
+    public function createPlottingPelajaran(Request $request) {
+
+        $request->validate([
+            'hari' => 'required',
+            'kelas' => 'required |unique:nama_kelas',
+            'periode' => 'required',
+            'jam' => 'required',
+            'mapel' => 'required |unique:mata_pelajaran',
+            'guru' => 'required|unique:data_pegawai',
+        ]);
+
+        $plotting = new Plotting;
+        
+        $id_kelas = Kelas::find('id')->id;
+        $id_mapel = MataPelajaran::find('id')->id;
+        $id_guru = DataPegawai::find('id')->id;
+
+        $plotting->id_kelas = $id_kelas;
+        $plotting->id_mapel = $id_mapel;
+        $plotting->id_guru = $id_guru;
+        $plotting->hari = $request->input('hari');
+        $plotting->kelas = $request->input('kelas');
+        $plotting->periode = $request->input('periode');
+        $plotting->jam = $request->input('jam');
+        $plotting->mapel = $request->input('mapel');
+        $plotting->guru = $request->input('guru');
+        $plotting->save();
+        return redirect()->back()->with('success', 'Plotting berhasil ditambahkan');
+    }
+
+    /**
+     * Show Plotting
+     * 
+     * @return Response
+     */
+    public function plotting(Request $request) {
+        $kelas = Kelas::all();
+        $mapel = MataPelajaran::all();
+        $guru = DataPegawai::all();
+
+        return view('mapel.plotting-mapel', compact('kelas', 'mapel', 'guru'));
     }
 }
