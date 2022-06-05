@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class KartuKeluarga extends Model
 {
+
+    protected $table = 'kartu_keluarga';
     use HasFactory;
 
     protected $fillable = [
@@ -21,4 +23,5 @@ class KartuKeluarga extends Model
         'kode_pos',
         'jumlah_anggota_kk',
     ];
+
 }

@@ -95,16 +95,16 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="nama-lengkap">Nama Lengkap</label>
-                                        <input type="text" class="form-control" id="nama-lengkap" name="nama-lengkap" required placeholder="Masukkan Nama Lengkap">
+                                        <input type="text" class="form-control" id="nama-lengkap" name="nama_lengkap" required placeholder="Masukkan Nama Lengkap">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="nama-panggilan">Nama Panggilan</label>
-                                        <input type="text" class="form-control" id="nama-panggilan" required name="nama-panggilan" placeholder="Masukkan Nama Panggilan">
+                                        <input type="text" class="form-control" id="nama-panggilan" required name="nama_panggilan" placeholder="Masukkan Nama Panggilan">
                                     </div>
                                 </div>
                                 <div class="px-2 mb-3">
                                     <label for="jk">Jenis Kelamin</label>
-                                    <select class="form-select" aria-label="Pilih Jenis Kelamin">
+                                    <select name="jenis_kelamin" class="form-select" aria-label="Pilih Jenis Kelamin">
                                     <option selected>-- Pilih Jenis Kelamin --</option>
                                     <option value="lk">Laki-Laki</option>
                                     <option value="pr">Perempuan</option>
@@ -113,17 +113,17 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="tempat-lahir">Tempat</label>
-                                        <input type="text" class="form-control" id="tempat-lahir" required name="tempat-lahir" placeholder="Masukkan Tempat Lahir">
+                                        <input type="text" class="form-control" id="tempat-lahir" required name="tempat_lahir" placeholder="Masukkan Tempat Lahir">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="tanggal-lahir">Tanggal Lahir</label>
-                                        <input type="date" class="form-control" id="tanggal-lahir" required name="tanggal-lahir">
+                                        <input type="date" class="form-control" id="tanggal-lahir" required name="tanggal_lahir">
                                     </div>
                                 </div>
                                 <div class="row px-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="agama">Agama</label>
-                                        <select class="form-select" aria-label="Pilih Agama">
+                                        <select name="agama" class="form-select" aria-label="Pilih Agama">
                                         <option selected>-- Pilih Agama --</option>
                                         <option value="islam">Islam</option>
                                         <option value="protestan">Kristen Protestan</option>
@@ -135,7 +135,7 @@ active
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="warga-negara">Warga Negara</label>
-                                        <select class="form-select" aria-label="Pilih Warga Negara">
+                                        <select name="kewarganegaraan" class="form-select" aria-label="Pilih Warga Negara">
                                         <option selected>-- Pilih Warga Negara --</option>
                                         <option value="wni">WNI</option>
                                         <option value="wna">WNA</option>
@@ -157,7 +157,7 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="status-hubungan">Status Hubungan Keluarga</label>
-                                        <select class="form-select" aria-label="Pilih Status Hubungan Keluarga">
+                                        <select name="status_keluarga" class="form-select" aria-label="Pilih Status Hubungan Keluarga">
                                         <option selected>-- Pilih Status Hubungan Keluarga --</option>
                                         <option value="kandung">Anak Kandung</option>
                                         <option value="tiri">Anak Tiri</option>
@@ -167,7 +167,7 @@ active
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="status-anak">Status Anak</label>
-                                        <select class="form-select" aria-label="Pilih Status Anak">
+                                        <select name="status_anak" class="form-select" aria-label="Pilih Status Anak">
                                         <option selected>-- Pilih Status Anak --</option>
                                         <option value="lengkap">Orang Tua Lengkap</option>
                                         <option value="yatim">Anak Yatim</option>                                        
@@ -179,7 +179,7 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="tinggal-bersama">Tinggal Bersama</label>
-                                        <select class="form-select" aria-label="Pilih Tinggal Bersama">
+                                        <select name="tinggal_bersama" class="form-select" aria-label="Pilih Tinggal Bersama">
                                         <option selected>-- Pilih Tinggal Bersama --</option>
                                         <option value="orangtua">Orang Tua</option>
                                         <option value="wali">Wali</option>
@@ -192,11 +192,11 @@ active
                                     </div>
                                     <div class="col-md-3 mb-2">
                                         <label for="anak-ke">Anak Ke-</label>
-                                        <input type="text" class="form-control" id="anak-ke" required name="anak-ke" placeholder="Isi Dengan Angka">
+                                        <input type="text" class="form-control" id="anak-ke" required name="anak_ke" placeholder="Isi Dengan Angka">
                                     </div>
                                     <div class="col-md-3 mb-2">
                                         <label for="jumlah-saudara">Jumlah Saudara</label>
-                                        <input type="text" class="form-control" id="jumlah-saudara" required name="jumlah-saudara" placeholder="Isi Dengan Angka">
+                                        <input type="text" class="form-control" id="jumlah-saudara" required name="jumlah_saudara" placeholder="Isi Dengan Angka">
                                     </div>
                                 </div>
                             </div>
@@ -207,7 +207,7 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="status-aktif">Status Aktif</label>
-                                        <select class="form-select" aria-label="Pilih Status Aktif">
+                                        <select name="status_aktif" class="form-select" aria-label="Pilih Status Aktif">
                                         <option selected>-- Pilih Status Aktif --</option>
                                         <option value="aktif">Aktif</option>
                                         <option value="tidak">Tidak Aktif</option>
@@ -215,7 +215,7 @@ active
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="status-awal">Status Awal Pendaftaran</label>
-                                        <select class="form-select" aria-label="Pilih Status Awal Pendaftaran">
+                                        <select name="status_pendaftaran" class="form-select" aria-label="Pilih Status Awal Pendaftaran">
                                         <option selected>-- Pilih Status Awal Pendaftaran --</option>
                                         <option value="baru">Baru</option>
                                         <option value="pindahan">Pindahan</option>                                        
@@ -226,15 +226,15 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="tahun-akademik">Tahun Akademik</label>
-                                        <select class="form-select" aria-label="Pilih Tahun Akademik">
+                                        <select name="tahun_akademik" class="form-select" aria-label="Pilih Tahun Akademik">
                                         <option selected>-- Pilih Tahun Akademik --</option>
                                         <option value="1">2021/2022</option>                                        
                                         <option value="2">2020/2021</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6 mb-2">
-                                        <label for="tanggal-belajar">Tanggal Mulai Belajara</label>
-                                        <input type="date" class="form-control" id="tanggal-belajar" required name="tanggal-belajar">
+                                        <label for="tanggal-belajar">Tanggal Mulai Belajar</label>
+                                        <input type="date" class="form-control" id="tanggal-belajar" required name="tanggal_belajar">
                                     </div>
                                 </div>
                             </div>
@@ -246,35 +246,35 @@ active
                                     <div class="row mb-3 ">
                                         <div class="col-sm-10">
                                             <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="check-nisn">
+                                            <input name="nisn" class="form-check-input" type="checkbox" id="check-nisn">
                                                 <label class="form-check-label" for="check-akte">
                                                     NISN
                                                 </label>
                                             </div>
                                                 
                                             <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="check-akte">
+                                            <input name="akte" class="form-check-input" type="checkbox" id="check-akte">
                                                 <label class="form-check-label" for="check-akte">
                                                     Akte Kelahiran
                                                 </label>
                                             </div>
 
                                             <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="check-kk">
+                                            <input name="kk" class="form-check-input" type="checkbox" id="check-kk">
                                                 <label class="form-check-label" for="check-kk">
                                                     Kartu Keluarga
                                                 </label>
                                             </div>
                                                 
                                             <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="check-ijazah">
+                                            <input name="ijazah" class="form-check-input" type="checkbox" id="check-ijazah">
                                                 <label class="form-check-label" for="check-ijazah">
                                                     Ijazah
                                                 </label>
                                             </div>
 
                                             <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="check-skhun">
+                                            <input name="skhun" class="form-check-input" type="checkbox" id="check-skhun">
                                                 <label class="form-check-label" for="check-skhun">
                                                     SKHUN
                                                 </label>
@@ -285,7 +285,7 @@ active
                                 </div>
                                 <div class="col-md-6 ">
                                     <label for="level">Upload Foto</label>
-                                    <input type="file" class="form-control" id="foto" required>
+                                    <input type="file" class="form-control" id="foto" name="foto" required>
                                 </div>
                             </div>
                             
@@ -303,7 +303,7 @@ active
                                         </div>
                                         <div class="col-md-6 mb-2">
                                             <label for="kab-kota">Kabupaten/Kota</label>
-                                            <input type="text" class="form-control" id="kab-kota" required name="kab-kota" placeholder="Masukkan Kabupatne/Kota">
+                                            <input type="text" class="form-control" id="kab-kota" required name="kab_kota" placeholder="Masukkan Kabupatne/Kota">
                                         </div>
                                     </div>
                                     <div class="row px-2 mb-2">
@@ -313,7 +313,7 @@ active
                                         </div>
                                         <div class="col-md-6 mb-2">
                                             <label for="desa-kel">Desa/Kelurahan</label>
-                                            <input type="text" class="form-control" id="desa-kel" required name="desa-kel" placeholder="Masukkan Desa/Kelurahan">
+                                            <input type="text" class="form-control" id="desa-kel" required name="desa_kel" placeholder="Masukkan Desa/Kelurahan">
                                         </div>
                                     </div>
                                     <div class="row px-2 mb-2">
@@ -331,7 +331,7 @@ active
                                         </div>
                                         <div class="col-md-4 mb-2">
                                             <label for="kode-pos">Kode Pos</label>
-                                            <input type="text" class="form-control" id="kode-pos" required name="kode-pos" placeholder="Masukkan Kode Pos">
+                                            <input type="text" class="form-control" id="kode-pos" required name="kode_pos" placeholder="Masukkan Kode Pos">
                                         </div>
                                     </div>
                                     <div class="row px-2 mb-2">
@@ -347,11 +347,11 @@ active
                                     <div class="row px-2 mb-2">
                                         <div class="col-md-6 mb-2">
                                             <label for="no_telp">Jarak Ke Sekolah</label>
-                                            <input type="text" class="form-control" id="no_telp" name="no_telp" required placeholder="Masukkan Nomor Telepon">
+                                            <input type="text" class="form-control" id="no_telp" name="jarak" required placeholder="Masukkan Jarak">
                                         </div>
                                         <div class="col-md-6 mb-2">
                                             <label for="transportasi">Moda Transportasi</label>
-                                            <select class="form-select" aria-label="Pilih Moda Transportasi">
+                                            <select name="transportasi" class="form-select" aria-label="Pilih Moda Transportasi">
                                             <option selected>-- Pilih Moda Transportasi --</option>
                                             <option value="1">Jalan Kaki</option>
                                             <option value="2">Kendaraan Pribadi</option>
@@ -366,10 +366,10 @@ active
                                     <div class="row px-2 mb-2">
                                         <label for="waktu-tempuh-jam">Waktu Tempuh Ke Sekolah *) Jam Isikan Dengan 00 , Jika Hanya Dalam Hitungan Menit</label>
                                         <div class="col-md-6 mb-2">
-                                            <input type="text" class="form-control" id="waktu-tempuh-jam" name="waktu-tempuh-jam" required placeholder="00 Jam">
+                                            <input type="text" class="form-control" id="waktu-tempuh-jam" name="waktu_tempuh_jam" required placeholder="00 Jam">
                                         </div>
                                         <div class="col-md-6 mb-2">
-                                            <input type="text" class="form-control" id="waktu-tempuh-menit" required name="waktu-tempuh-menit" placeholder="00 Ment">
+                                            <input type="text" class="form-control" id="waktu-tempuh-menit" required name="waktu_tempuh_menit" placeholder="00 Ment">
                                         </div>
                                     </div>
                                 </div>
@@ -382,7 +382,7 @@ active
                                 <div class="mb-3">                                              
                                     <div class="px-2 mb-2">
                                         <label for="gol-darah">Golongan Darah</label>
-                                        <select class="form-select" aria-label="Pilih Golongan Darah">
+                                        <select name="golongan_darah" class="form-select" aria-label="Pilih Golongan Darah">
                                         <option selected>-- Pilih Golongan Darah --</option>
                                         <option value="1">O+</option>
                                         <option value="2">O-</option>
@@ -397,7 +397,7 @@ active
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="penyakit-kronis">Penyakit Kronis</label>
                                         <div class="input-group">
-                                            <textarea type="text" class="form-control" id="penyakit-kronis" required name="penyakit-kronis">
+                                            <textarea type="text" class="form-control" id="penyakit-kronis" required name="penyakit_kronis">
                                             </textarea>
                                         </div>
                                     </div>
@@ -410,7 +410,7 @@ active
                                     </div>
                                     <div class="px-2 mb-2">
                                         <label for="kebutuhan-khusus">Kebutuhan Khusus</label>
-                                        <select class="form-select" aria-label="Pilih Kebutuhan Khusus">
+                                        <select name="kebutuhan_khusus" class="form-select" aria-label="Pilih Kebutuhan Khusus">
                                         <option selected>-- Pilih Kebutuhan Khusus --</option>
                                         </select>
                                     </div>
@@ -440,25 +440,25 @@ active
                                         </div>
                                         <div class="col-md-6 mb-2">
                                             <label for="nama-tk">Nama Sekolah Asal</label>
-                                            <input type="text" class="form-control" id="nama-tk" required name="nama-tk" placeholder="Masukkan Sekolah Asal"> 
+                                            <input type="text" class="form-control" id="nama-tk" required name="nama_tk" placeholder="Masukkan Sekolah Asal"> 
                                         </div>
                                     </div>
 
                                     <div class="row px-2 mb-2">
                                         <div class="col-md-6 ">
                                             <label for="tanggal-ijazah-tk">Tanggal Ijazah</label>
-                                            <input type="date" class="form-control" id="tanggal-ijazah-tk" required name="tanggal-ijazah-tk">
+                                            <input type="date" class="form-control" id="tanggal-ijazah-tk" required name="tanggal_ijazah_tk">
                                         </div>
                                         <div class="col-md-6 ">
                                             <label for="ijazah-tk">No. Ijazah</label>
-                                            <input type="text" class="form-control" id="ijazah-tk" required name="ijazah-tk" placeholder="Masukkan Nomor Ijazah">
+                                            <input type="text" class="form-control" id="ijazah-tk" required name="ijazah_tk" placeholder="Masukkan Nomor Ijazah">
                                         </div>
                                     </div> 
 
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="ujian-tk">No. Ujian Sebelumnya</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="ujian-tk" required name="ujian-tk" placeholder="Masukkan No. Ujian Sebelumnya"> 
+                                            <input type="text" class="form-control" id="ujian-tk" required name="ujian_tk" placeholder="Masukkan No. Ujian Sebelumnya"> 
                                         </div>
                                     </div>
 
