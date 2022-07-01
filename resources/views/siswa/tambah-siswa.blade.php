@@ -464,13 +464,13 @@ active
 
                                     <div class="pt-2 px-2 mb-2">
                                         <label>Status Sekolah Sebelumnya</label>
-                                        <div class="form-check">
+                                        <div name="tk_negri" class="form-check">
                                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
                                             <label class="form-check-label" for="gridRadios1">
                                                 Negeri
                                             </label>
                                         </div>
-                                        <div class="form-check">
+                                        <div name="tk_swasta" class="form-check">
                                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
                                             <label class="form-check-label" for="gridRadios2">
                                                 Swasta
@@ -490,14 +490,14 @@ active
                                         </div>
                                         <div class="col-md-6 mb-2">
                                             <label for="nama-sd">Nama Sekolah Asal</label>
-                                            <input type="text" class="form-control" id="nama-sd" required name="nama-sd" placeholder="Masukkan Sekolah Asal"> 
+                                            <input type="text" class="form-control" id="nama-sd" required name="nama_sd" placeholder="Masukkan Sekolah Asal"> 
                                         </div>
                                     </div>
 
                                     <div class="row px-2 mb-2">
                                         <div class="col-md-6 ">
                                             <label for="tanggal-ijazah-sd">Tanggal Ijazah</label>
-                                            <input type="date" class="form-control" id="tanggal-ijazah-sd" required name="tanggal-ijazah-sd">
+                                            <input type="date" class="form-control" id="tanggal-ijazah-sd" required name="tanggal_ijazah_sd">
                                         </div>
                                         <div class="col-md-6 ">
                                             <label for="ijazah-sd">No. Ijazah</label>
@@ -508,19 +508,19 @@ active
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="ujian-sd">No. Ujian Sebelumnya</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="ujian-sd" required name="ujian-sd" placeholder="Masukkan No. Ujian Sebelumnya"> 
+                                            <input type="text" class="form-control" id="ujian-sd" required name="ujian_sd" placeholder="Masukkan No. Ujian Sebelumnya"> 
                                         </div>
                                     </div>
 
                                     <div class="pt-2 px-2 mb-2">
                                         <label>Status Sekolah Sebelumnya</label>
-                                        <div class="form-check">
+                                        <div name="sd_negri" class="form-check">
                                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
                                             <label class="form-check-label" for="gridRadios1">
                                                 Negeri
                                             </label>
                                         </div>
-                                        <div class="form-check">
+                                        <div name="sd_swasta" class="form-check">
                                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
                                             <label class="form-check-label" for="gridRadios2">
                                                 Swasta
@@ -540,37 +540,37 @@ active
                                         </div>
                                         <div class="col-md-6 mb-2">
                                             <label for="nama-smp">Nama Sekolah Asal</label>
-                                            <input type="text" class="form-control" id="nama-smp" required name="nama-smp" placeholder="Masukkan Sekolah Asal"> 
+                                            <input type="text" class="form-control" id="nama-smp" required name="nama_smp" placeholder="Masukkan Sekolah Asal"> 
                                         </div>
                                     </div>
 
                                     <div class="row px-2 mb-2">
                                         <div class="col-md-6 ">
                                             <label for="tanggal-ijazah-smp">Tanggal Ijazah</label>
-                                            <input type="date" class="form-control" id="tanggal-ijazah-smp" required name="tanggal-ijazah-smp">
+                                            <input type="date" class="form-control" id="tanggal-ijazah-smp" required name="tanggal_ijazah_smp">
                                         </div>
                                         <div class="col-md-6 ">
                                             <label for="ijazah-smp">No. Ijazah</label>
-                                            <input type="text" class="form-control" id="ijazah-smp" required name="ijazah-smp" placeholder="Masukkan Nomor Ijazah">
+                                            <input type="text" class="form-control" id="ijazah-smp" required name="ijazah_smp" placeholder="Masukkan Nomor Ijazah">
                                         </div>
                                     </div> 
 
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="ujian-smp">No. Ujian Sebelumnya</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="ujian-smp" required name="ujian-smp" placeholder="Masukkan No. Ujian Sebelumnya"> 
+                                            <input type="text" class="form-control" id="ujian-smp" required name="ujian_smp" placeholder="Masukkan No. Ujian Sebelumnya"> 
                                         </div>
                                     </div>
 
                                     <div class="pt-2 px-2 mb-2">
                                         <label>Status Sekolah Sebelumnya</label>
-                                        <div class="form-check">
+                                        <div name="smp_negri" class="form-check">
                                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
                                             <label class="form-check-label" for="gridRadios1">
                                                 Negeri
                                             </label>
                                         </div>
-                                        <div class="form-check">
+                                        <div name="sd_swasta" class="form-check">
                                             <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
                                             <label class="form-check-label" for="gridRadios2">
                                                 Swasta
@@ -590,7 +590,7 @@ active
                                 <div class="mb-3">                                              
                                     <div class="px-2 mb-2">
                                         <label for="dipindah-karena">Dipindahkan karena :</label>
-                                        <select class="form-select" aria-label="Pilih Dipindahkan Karena">
+                                        <select name="pindahan_type" class="form-select" aria-label="Pilih Dipindahkan Karena">
                                         <option selected>-- Pilih Dipindahkan Karena --</option>
                                         <option value="1">Mutasi/Pindah Sekolah</option>
                                         <option value="2">Dikeluarkan</option>
@@ -600,26 +600,26 @@ active
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="alasan-pindah">Alasan Dipindahkan</label>
                                         <div class="input-group">
-                                            <textarea type="text" class="form-control" id="alasan-pindah" required name="alasan-pindah">
+                                            <textarea type="text" class="form-control" id="alasan-pindah" required name="alasan_pindah">
                                             </textarea>
                                         </div>
                                     </div>
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="no-surat-pindah">No. Surat Pindah</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="no-surat-pindah" required name="no-surat-pindah"> 
+                                            <input type="text" class="form-control" id="no-surat-pindah" required name="no_surat_pindah"> 
                                         </div>
                                     </div>
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="sekolah-asal">Nama Sekolah Asal</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="sekolah-asal" required name="sekolah-asal"> 
+                                            <input type="text" class="form-control" id="sekolah-asal" required name="sekolah_asal"> 
                                         </div>
                                     </div>
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="alamat-sekolah-asal">Alasan Dipindahkan</label>
                                         <div class="input-group">
-                                            <textarea type="text" class="form-control" id="alasan-pindahalamat-sekolah-asal" required name="alamat-sekolah-asal">
+                                            <textarea type="text" class="form-control" id="alasan-pindahalamat-sekolah-asal" required name="alamat_sekolah_asal">
                                             </textarea>
                                         </div>
                                     </div>
@@ -635,30 +635,30 @@ active
                                     <div class="px-2 mb-2">
                                         <label for="nama-ayah">Nama Ayah</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="nama-ayah" required name="nama-ayah" placeholder="Masukkan Nama Ayah"> 
+                                            <input type="text" class="form-control" id="nama-ayah" required name="nama_ayah" placeholder="Masukkan Nama Ayah"> 
                                         </div>
                                     </div>
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="nik-ayah">NIK Ayah</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="nik-ayah" required name="nik-ayah" placeholder="Masukkan NIK Ayah"> 
+                                            <input type="text" class="form-control" id="nik-ayah" required name="nik_ayah" placeholder="Masukkan NIK Ayah"> 
                                         </div>
                                     </div>
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="tempat-lahir-ayah">Tempat</label>
-                                        <input type="text" class="form-control" id="tempat-lahir-ayah" required name="tempat-lahir-ayah" placeholder="Masukkan Tempat Lahir Ayah">
+                                        <input type="text" class="form-control" id="tempat-lahir-ayah" required name="tempat_lahir_ayah" placeholder="Masukkan Tempat Lahir Ayah">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="tanggal-lahir-ayah">Tanggal Lahir</label>
-                                        <input type="date" class="form-control" id="tanggal-lahir-ayah" required name="tanggal-lahir-ayah">
+                                        <input type="date" class="form-control" id="tanggal-lahir-ayah" required name="tanggal_lahir_ayah">
                                     </div>
                                 </div>
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="agama">Agama</label>
                                         <select class="form-select" aria-label="Pilih Agama">
-                                        <option selected>-- Pilih Agama --</option>
+                                        <option name="agama_ayah" selected>-- Pilih Agama --</option>
                                         <option value="islam">Islam</option>
                                         <option value="protestan">Kristen Protestan</option>
                                         <option value="katholik">Kristen Katholik</option>
@@ -669,7 +669,7 @@ active
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="khusus">Kebutuhan Khusus</label>
-                                        <select class="form-select" aria-label="Pilih Berkebutuhan Khusus">
+                                        <select name="kebutuhan_khusus_ayah" class="form-select" aria-label="Pilih Berkebutuhan Khusus">
                                         <option selected>-- Pilih Berkebutuhan Khusus--</option>
                                         </select>
                                     </div>
@@ -677,25 +677,25 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="telp-ayah">Nomor Telepon</label>
-                                        <input type="text" class="form-control" id="telp-ayah" required name="telp-ayah" placeholder="*)Wajib Memassukkan nomor telepon Aktif">
+                                        <input type="text" class="form-control" id="telp-ayah" required name="telp_ayah" placeholder="*)Wajib Memassukkan nomor telepon Aktif">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email" required name="email" placeholder="Masukkan Email Ayah">
+                                        <input type="text" class="form-control" id="email" required name="email_ayah" placeholder="Masukkan Email Ayah">
                                     </div>
                                 </div>
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="warga-negara-ayah">Warga Negara</label>
-                                        <select class="form-select" aria-label="Pilih Warga Negara">
+                                        <select name="wn_ayah" class="form-select" aria-label="Pilih Warga Negara">
                                         <option selected>-- Pilih Warga Negara --</option>
                                         <option value="wni">WNI</option>
                                         <option value="wna">WNA</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6 mb-2">
-                                        <label for="status-ayah">Warga Negara</label>
-                                        <select class="form-select" aria-label="Pilih Status">
+                                        <label for="status-ayah">Status Hidup</label>
+                                        <select name="status_hidup_ayah" class="form-select" aria-label="Pilih Status">
                                         <option selected>-- Pilih Status --</option>
                                         <option value="hidup">Hidup</option>
                                         <option value="meninggal">Meninggal Dunia</option>
@@ -705,7 +705,7 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="pendikan-terakhir-ayah">Pendidikan Terakhir</label>
-                                        <select class="form-select" aria-label="Pilih Pendidikan Terakhir">
+                                        <select name="pendidikan_ayah" class="form-select" aria-label="Pilih Pendidikan Terakhir">
                                         <option selected>-- Pilih Pendidikan Terakhir --</option>
                                         <option value="d1">D1</option>
                                         <option value="d2">D2</option>
@@ -723,17 +723,17 @@ active
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="pendidikan-ayah">Nama Lembaga Pendidikan</label>
-                                        <input type="text" class="form-control" id="pendidikan-ayah" required name="pendidikan-ayah" placeholder="Masukkan Nama Lembaga Pendidikan">
+                                        <input type="text" class="form-control" id="pendidikan-ayah" required name="lembaga_pendidikan_ayah" placeholder="Masukkan Nama Lembaga Pendidikan">
                                     </div>
                                 </div>
                                 <div class="row px-2 mb-2">
                                 <div class="col-md-6 mb-2">
                                         <label for="profesi-ayah">Profesi</label>
-                                        <input type="text" class="form-control" id="profesi-ayah" required name="profesi-ayah" placeholder="Masukkan Profesi">
+                                        <input type="text" class="form-control" id="profesi-ayah" required name="profesi_ayah" placeholder="Masukkan Profesi">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="status-ayah">Penghasilan per Bulan</label>
-                                        <select class="form-select" aria-label="Pilih Status">
+                                        <select name="penghasilan_ayah" class="form-select" aria-label="Pilih Status">
                                         <option selected>-- Pilih Status --</option>
                                         <option value="tidak">Tidak Berpenghasilan</option>
                                         <option value="1">> Rp. 500.000</option>
@@ -748,7 +748,7 @@ active
                                     <div class="px-2 mb-2">
                                         <label for="nrp-ayah">NRP</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="nrp-ayah" name="nrp-ayah" placeholder="*) Isikan Jika Staff Sekolah/Yayasan"> 
+                                            <input type="text" class="form-control" id="nrp-ayah" name="nrp_ayah" placeholder="*) Isikan Jika Staff Sekolah/Yayasan"> 
                                         </div>
                                     </div>
                                 </div>
@@ -761,29 +761,29 @@ active
                                     <div class="px-2 mb-2">
                                         <label for="nama-ibu">Nama Ibu</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="nama-ibu" required name="nama-ibu" placeholder="Masukkan Nama ibu"> 
+                                            <input type="text" class="form-control" id="nama-ibu" required name="nama_ibu" placeholder="Masukkan Nama ibu"> 
                                         </div>
                                     </div>
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="nik-ibu">NIK Ibu</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="nik-ibu" required name="nik-ibu" placeholder="Masukkan NIK ibu"> 
+                                            <input type="text" class="form-control" id="nik-ibu" required name="nik_ibu" placeholder="Masukkan NIK ibu"> 
                                         </div>
                                     </div>
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="tempat-lahir-ibu">Tempat</label>
-                                        <input type="text" class="form-control" id="tempat-lahir-ibu" required name="tempat-lahir-ibu" placeholder="Masukkan Tempat Lahir ibu">
+                                        <input type="text" class="form-control" id="tempat-lahir-ibu" required name="tempat_lahir_ibu" placeholder="Masukkan Tempat Lahir ibu">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="tanggal-lahir-ibu">Tanggal Lahir</label>
-                                        <input type="date" class="form-control" id="tanggal-lahir-ibu" required name="tanggal-lahir-ibu">
+                                        <input type="date" class="form-control" id="tanggal-lahir-ibu" required name="tanggal_lahir_ibu">
                                     </div>
                                 </div>
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="agama">Agama</label>
-                                        <select class="form-select" aria-label="Pilih Agama">
+                                        <select name ="agama_ibu" class="form-select" aria-label="Pilih Agama">
                                         <option selected>-- Pilih Agama --</option>
                                         <option value="islam">Islam</option>
                                         <option value="protestan">Kristen Protestan</option>
@@ -795,7 +795,7 @@ active
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="khusus">Kebutuhan Khusus</label>
-                                        <select class="form-select" aria-label="Pilih Berkebutuhan Khusus">
+                                        <select name="kebutuhan_khusus_ibu" class="form-select" aria-label="Pilih Berkebutuhan Khusus">
                                         <option selected>-- Pilih Berkebutuhan Khusus--</option>
                                         </select>
                                     </div>
@@ -803,24 +803,24 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="telp-ibu">Nomor Telepon</label>
-                                        <input type="text" class="form-control" id="telp-ibu" required name="telp-ibu" placeholder="*)Wajib Memassukkan nomor telepon Aktif">
+                                        <input type="text" class="form-control" id="telp-ibu" required name="telp_ibu" placeholder="*)Wajib Memassukkan nomor telepon Aktif">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email" required name="email" placeholder="Masukkan Email ibu">
+                                        <input type="text" class="form-control" id="email" required name="email_ibu" placeholder="Masukkan Email ibu">
                                     </div>
                                 </div>
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="warga-negara-ibu">Warga Negara</label>
-                                        <select class="form-select" aria-label="Pilih Warga Negara">
+                                        <select name="wn_ibuh" class="form-select" aria-label="Pilih Warga Negara">
                                         <option selected>-- Pilih Warga Negara --</option>
                                         <option value="wni">WNI</option>
                                         <option value="wna">WNA</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6 mb-2">
-                                        <label for="status-ibu">Warga Negara</label>
+                                        <label for="status-ibu">Status Hidup</label>
                                         <select class="form-select" aria-label="Pilih Status">
                                         <option selected>-- Pilih Status --</option>
                                         <option value="hidup">Hidup</option>
@@ -831,7 +831,7 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="pendikan-terakhir-ibu">Pendidikan Terakhir</label>
-                                        <select class="form-select" aria-label="Pilih Pendidikan Terakhir">
+                                        <select name="pendikan_ibu" class="form-select" aria-label="Pilih Pendidikan Terakhir">
                                         <option selected>-- Pilih Pendidikan Terakhir --</option>
                                         <option value="d1">D1</option>
                                         <option value="d2">D2</option>
@@ -849,17 +849,17 @@ active
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="pendidikan-ibu">Nama Lembaga Pendidikan</label>
-                                        <input type="text" class="form-control" id="pendidikan-ibu" required name="pendidikan-ibu" placeholder="Masukkan Nama Lembaga Pendidikan">
+                                        <input type="text" class="form-control" id="pendidikan-ibu" required name="lembaga_pendidikan_ibu" placeholder="Masukkan Nama Lembaga Pendidikan">
                                     </div>
                                 </div>
                                 <div class="row px-2 mb-2">
                                 <div class="col-md-6 mb-2">
                                         <label for="profesi-ibu">Profesi</label>
-                                        <input type="text" class="form-control" id="profesi-ibu" required name="profesi-ibu" placeholder="Masukkan Profesi">
+                                        <input type="text" class="form-control" id="profesi-ibu" required name="profesi_ibu" placeholder="Masukkan Profesi">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="status-ibu">Penghasilan per Bulan</label>
-                                        <select class="form-select" aria-label="Pilih Status">
+                                        <select name="penghasilan_ibu" class="form-select" aria-label="Pilih Status">
                                         <option selected>-- Pilih Status --</option>
                                         <option value="tidak">Tidak Berpenghasilan</option>
                                         <option value="1">> Rp. 500.000</option>
@@ -874,7 +874,7 @@ active
                                     <div class="px-2 mb-2">
                                         <label for="nrp-ibu">NRP</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="nrp-ibu" name="nrp-ibu" placeholder="*) Isikan Jika Staff Sekolah/Yayasan"> 
+                                            <input type="text" class="form-control" id="nrp-ibu" name="nrp_ibu" placeholder="*) Isikan Jika Staff Sekolah/Yayasan"> 
                                         </div>
                                     </div>
                                 </div>
@@ -886,29 +886,29 @@ active
                                     <div class="px-2 mb-2">
                                         <label for="nama-wali">Nama Wali</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="nama-wali" required name="nama-wali" placeholder="Masukkan Nama wali"> 
+                                            <input type="text" class="form-control" id="nama-wali" required name="nama_wali" placeholder="Masukkan Nama wali"> 
                                         </div>
                                     </div>
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="nik-wali">NIK Wali</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="nik-wali" required name="nik-wali" placeholder="Masukkan NIK wali"> 
+                                            <input type="text" class="form-control" id="nik-wali" required name="nik_wali" placeholder="Masukkan NIK wali"> 
                                         </div>
                                     </div>
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="tempat-lahir-wali">Tempat</label>
-                                        <input type="text" class="form-control" id="tempat-lahir-wali" required name="tempat-lahir-wali" placeholder="Masukkan Tempat Lahir wali">
+                                        <input type="text" class="form-control" id="tempat-lahir-wali" required name="tempat_lahir_wali" placeholder="Masukkan Tempat Lahir wali">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="tanggal-lahir-wali">Tanggal Lahir</label>
-                                        <input type="date" class="form-control" id="tanggal-lahir-wali" required name="tanggal-lahir-wali">
+                                        <input type="date" class="form-control" id="tanggal-lahir-wali" required name="tanggal_lahir_wali">
                                     </div>
                                 </div>
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="agama">Agama</label>
-                                        <select class="form-select" aria-label="Pilih Agama">
+                                        <select name="agama_wali" class="form-select" aria-label="Pilih Agama">
                                         <option selected>-- Pilih Agama --</option>
                                         <option value="islam">Islam</option>
                                         <option value="protestan">Kristen Protestan</option>
@@ -920,7 +920,7 @@ active
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="khusus">Kebutuhan Khusus</label>
-                                        <select class="form-select" aria-label="Pilih Berkebutuhan Khusus">
+                                        <select name="kebutuhan_khusus_wali" class="form-select" aria-label="Pilih Berkebutuhan Khusus">
                                         <option selected>-- Pilih Berkebutuhan Khusus--</option>
                                         </select>
                                     </div>
@@ -928,25 +928,25 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="telp-wali">Nomor Telepon</label>
-                                        <input type="text" class="form-control" id="telp-wali" required name="telp-wali" placeholder="*)Wajib Memassukkan nomor telepon Aktif">
+                                        <input type="text" class="form-control" id="telp-wali" required name="telp_wali" placeholder="*)Wajib Memassukkan nomor telepon Aktif">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email" required name="email" placeholder="Masukkan Email wali">
+                                        <input type="text" class="form-control" id="email" required name="email_wali" placeholder="Masukkan Email wali">
                                     </div>
                                 </div>
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="warga-negara-wali">Warga Negara</label>
-                                        <select class="form-select" aria-label="Pilih Warga Negara">
+                                        <select name="wn_wali" class="form-select" aria-label="Pilih Warga Negara">
                                         <option selected>-- Pilih Warga Negara --</option>
                                         <option value="wni">WNI</option>
                                         <option value="wna">WNA</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6 mb-2">
-                                        <label for="status-wali">Warga Negara</label>
-                                        <select class="form-select" aria-label="Pilih Status">
+                                        <label for="status-wali">Status Hidup</label>
+                                        <select name="status_hidup_wali" class="form-select" aria-label="Pilih Status">
                                         <option selected>-- Pilih Status --</option>
                                         <option value="hidup">Hidup</option>
                                         <option value="meninggal">Meninggal Dunia</option>
@@ -956,7 +956,7 @@ active
                                 <div class="row px-2 mb-2">
                                     <div class="col-md-6 mb-2">
                                         <label for="pendikan-terakhir-wali">Pendidikan Terakhir</label>
-                                        <select class="form-select" aria-label="Pilih Pendidikan Terakhir">
+                                        <select name="pendidikan_wali" class="form-select" aria-label="Pilih Pendidikan Terakhir">
                                         <option selected>-- Pilih Pendidikan Terakhir --</option>
                                         <option value="d1">D1</option>
                                         <option value="d2">D2</option>
@@ -974,17 +974,17 @@ active
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="pendidikan-wali">Nama Lembaga Pendidikan</label>
-                                        <input type="text" class="form-control" id="pendidikan-wali" required name="pendidikan-wali" placeholder="Masukkan Nama Lembaga Pendidikan">
+                                        <input type="text" class="form-control" id="pendidikan-wali" required name="lembaga_pendidikan_wali" placeholder="Masukkan Nama Lembaga Pendidikan">
                                     </div>
                                 </div>
                                 <div class="row px-2 mb-2">
                                 <div class="col-md-6 mb-2">
                                         <label for="profesi-wali">Profesi</label>
-                                        <input type="text" class="form-control" id="profesi-wali" required name="profesi-wali" placeholder="Masukkan Profesi">
+                                        <input type="text" class="form-control" id="profesi-wali" required name="profesi_wali" placeholder="Masukkan Profesi">
                                     </div>
                                     <div class="col-md-6 mb-2">
                                         <label for="status-wali">Penghasilan per Bulan</label>
-                                        <select class="form-select" aria-label="Pilih Status">
+                                        <select name="penghasilan_wali" class="form-select" aria-label="Pilih Status">
                                         <option selected>-- Pilih Status --</option>
                                         <option value="tidak">Tidak Berpenghasilan</option>
                                         <option value="1">> Rp. 500.000</option>
@@ -999,7 +999,7 @@ active
                                     <div class="px-2 mb-2">
                                         <label for="nrp-wali">NRP</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="nrp-wali" name="nrp-wali" placeholder="*) Isikan Jika Staff Sekolah/Yayasan"> 
+                                            <input type="text" class="form-control" id="nrp-wali" name="nrp_wali" placeholder="*) Isikan Jika Staff Sekolah/Yayasan"> 
                                         </div>
                                     </div>
                                 </div>
@@ -1031,7 +1031,7 @@ active
                                     <div class="pt-2 px-2 mb-2">
                                         <label for="hobi-lain">Lainnya</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="hobi-lain" required name="hobi-lain" placeholder="Masukkan Hobi Lainnya"> 
+                                            <input type="text" class="form-control" id="hobi-lain" required name="hobi_lain" placeholder="Masukkan Hobi Lainnya"> 
                                         </div>
                                     </div>
                                 </div>
@@ -1045,7 +1045,7 @@ active
                                     <div class="row px-2 mb-3">
                                         <div class="col-md-6 ">
                                             <label for="kelayakan-pip">Kelayakan PIP</label>
-                                            <select class="form-select" aria-label="Pilih Kelayakan PIP">
+                                            <select name="kelayakan_pip" class="form-select" aria-label="Pilih Kelayakan PIP">
                                             <option selected>-- Pilih Kelayakan PIP --</option>
                                             <option value="tidak">Tidak</option>
                                             <option value="ya">Ya</option>
@@ -1053,7 +1053,7 @@ active
                                         </div>
                                         <div class="col-md-6 ">
                                             <label for="alasan-pip">Alasan Layak Menerima PIP</label>
-                                            <select class="form-select" aria-label="Pilih Alasan Kelayakan PIP">
+                                            <select name="alasan_pip" class="form-select" aria-label="Pilih Alasan Kelayakan PIP">
                                             <option selected>-- Pilih Alasan Kelayakan PIP --</option>
                                             <option value="1">Penerima PKH/KSP/KIP</option>
                                             <option value="2">Penerima BSM 2014</option>
@@ -1069,18 +1069,18 @@ active
                                     <div class="row px-2">
                                         <div class="col-md-6 ">
                                             <label for="kode-bank">Kode Bank</label>
-                                            <input type="text" class="form-control" id="kode-bank" required name="kode-bank" placeholder="*) Untuk Penerima PIP">
+                                            <input type="text" class="form-control" id="kode-bank" required name="kode_bank" placeholder="*) Untuk Penerima PIP">
                                         </div>
                                         <div class="col-md-6 mb-2">
                                             <label for="rekening">Nomor Rekening</label>
-                                            <input type="text" class="form-control" id="rekening" required name="rekening" placeholder="*) Untuk Penerima PIP">
+                                            <input type="text" class="form-control" id="rekening" required name="no_rekening" placeholder="*) Untuk Penerima PIP">
                                         </div>
                                     </div> 
                                     
                                     <div class="pt-2 px-2">
                                         <label for="rekeningan">Rekening a.n</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control" id="rekeningan" required name="rekeningan" placeholder="*) Untuk Penerima PIP" >
+                                            <input type="text" class="form-control" id="rekeningan" required name="nama_rekening" placeholder="*) Untuk Penerima PIP" >
                                         </div>
                                     </div>
                                 </div>
@@ -1091,7 +1091,7 @@ active
                                     <div class="row px-2 mb-3">
                                         <div class="col-md-6 ">
                                             <label for="kps">Apakah Penerima KPS?</label>
-                                            <select class="form-select" aria-label="Penerima KPS">
+                                            <select name="kps" class="form-select" aria-label="Penerima KPS">
                                             <option selected>-- Penerima KPS? --</option>
                                             <option value="tidak">Tidak</option>
                                             <option value="ya">Ya</option>
@@ -1100,7 +1100,7 @@ active
                                         <div class="col-md-6">
                                             <label for="no-kps">No. KPS</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="no-kps" required name="no-kps" placeholder="*) Jika Ya Isi No. KPS (Kartu Perlindungan Sosial)" >
+                                                <input type="text" class="form-control" id="no-kps" required name="no_kps" placeholder="*) Jika Ya Isi No. KPS (Kartu Perlindungan Sosial)" >
                                             </div>
                                         </div>
                                     </div>
@@ -1112,7 +1112,7 @@ active
                                     <div class="row px-2 mb-3">
                                         <div class="col-md-6 ">
                                             <label for="kks">Apakah Penerima KKS?</label>
-                                            <select class="form-select" aria-label="Penerima KKS">
+                                            <select name="kks" class="form-select" aria-label="Penerima KKS">
                                             <option selected>-- Penerima KKS? --</option>
                                             <option value="tidak">Tidak</option>
                                             <option value="ya">Ya</option>
@@ -1121,7 +1121,7 @@ active
                                         <div class="col-md-6">
                                             <label for="no-kip">No. KIP</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="no-kip" required name="no-kip" placeholder="*) Jika Ya Isi No. KIP (Kartu Indonesia Pintar)" >
+                                                <input type="text" class="form-control" id="no-kip" required name="no_kip" placeholder="*) Jika Ya Isi No. KIP (Kartu Indonesia Pintar)" >
                                             </div>
                                         </div>
                                     </div>
@@ -1129,13 +1129,13 @@ active
                                         <div class="col-md-6">
                                             <label for="nama-kip">Nama KIP</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="nama-kip" required name="nama-kip" placeholder="*) Jika Ya Isi Nama Penerima KIP" >
+                                                <input type="text" class="form-control" id="nama-kip" required name="nama_kip" placeholder="*) Jika Ya Isi Nama Penerima KIP" >
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="no-kks">No. KKS</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="no-kks" required name="no-kks" placeholder="*) Jika Memiliki KKS (Kartu Keluarga Sejahtera)" >
+                                                <input type="text" class="form-control" id="no-kks" required name="no_kks" placeholder="*) Jika Memiliki KKS (Kartu Keluarga Sejahtera)" >
                                             </div>
                                         </div>
                                     </div>

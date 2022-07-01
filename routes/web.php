@@ -55,30 +55,33 @@ Route::post('/kelas/tambah-kelas', [AdminKurikulumController::class, 'createKela
 Route::get('/kelas/data-kelas', [AdminKurikulumController::class, 'showKelas'])->name('data-kelas');
 
 // mapel
-Route::get('/mapel/data-mapel', function () {
-    return view('mapel.data-mapel');
-})->name('data-mapel');
+// Route::get('/mapel/data-mapel', function () {
+//     return view('mapel.data-mapel');
+// })->name('data-mapel');
 Route::get('/mapel/tambah-mapel', function () {
     return view('mapel.tambah-mapel');
 })->name('tambah-mapel');
 Route::get('/mapel/data-mapel/detail', function () {
     return view('mapel.detail-mapel');
 })->name('detail-mapel');
-// Route::get('/mapel/plotting-mapel', function () {
-//     return view('mapel.plotting-mapel');
-// })->name('plotting-mapel');
+Route::get('/mapel/plotting-mapel', function () {
+    return view('mapel.plotting-mapel');
+})->name('plotting-mapel');
+Route::get('/kelas/data-kelas', [AdminKurikulumController::class, 'showMapel'])->name('data-kelas');
 
 Route::get('/mapel/plotting-mapel', [AdminKurikulumController::class, 'plotting'])->name('plotting-mapel');
 Route::post('/mapel/tambah-mapel', [AdminKurikulumController::class, 'createMataPelajaran'])->name('tambah-mapel');
 Route::post('/mapel/plotting-mapel', [AdminKurikulumController::class, 'createPlottingPelajaran'])->name('plotting-mapel');
+Route::get('/mapel/data-mapel',[AdminKurikulumController::class, 'showMapel'])->name('data-mapel');
 
 // siswa
-Route::get('/siswa/data-siswa', function () {
-    return view('siswa.data-siswa');
-})->name('data-siswa');
+// Route::get('/siswa/data-siswa', function () {
+//     return view('siswa.data-siswa');
+// })->name('data-siswa');
 Route::get('/siswa/tambah-siswa', function () {
     return view('siswa.tambah-siswa');
 })->name('tambah-siswa');
+Route::get('/siswa/data-siswa', [AdminKelasController::class, 'showDataSiswa'])->name('data-siswa');
 
 // penilaian
 Route::get('/penilaian', function () {
