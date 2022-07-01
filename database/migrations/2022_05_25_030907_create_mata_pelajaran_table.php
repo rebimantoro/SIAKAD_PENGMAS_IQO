@@ -18,6 +18,9 @@ class CreateMataPelajaranTable extends Migration
             $table->string('nama_mapel');
             $table->string('kelompok_mapel');
             $table->string('desc_mapel');
+            // nama_guru is nama_pegawai form data_pegawai table
+            $table->string('nama_guru');
+            $table->string('kelas');
             $table->string('status_mapel');
             $table->timestamps();
         });

@@ -14,18 +14,18 @@ class CreateSiswaTable extends Migration
     public function up()
     {
         Schema::create('siswa', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id_siswa');
             $table->string('nik');
-            $table->string('akte');
-            $table->string('kk');
-            $table->string('nama_lengkap');
-            $table->string('nama_panggilan');
-            $table->string('jenis_kelamin');
-            $table->string('tempat_lahir');
-            $table->date('tanggal_lahir');
-            $table->string('agama');
-            $table->string('kewarganegaraan');
-            $table->string('bahasa');
+            $table->string('akte_siswa');
+            $table->string('kk_siswa');
+            $table->string('nama_lengkap_siswa');
+            $table->string('nama_panggilan_siswa');
+            $table->string('jenis_kelamin_siswa');
+            $table->string('tempat_lahir_siswa');
+            $table->date('tanggal_lahir_siswa');
+            $table->string('agama_siswa');
+            $table->string('kewarganegaraan_siswa');
+            $table->string('bahasa_siswa');
             // Hubungan Keluarga
             $table->string('status_keluarga');
             $table->string('status_anak');
@@ -66,12 +66,24 @@ class CreateSiswaTable extends Migration
             $table->string('kebutuhan_khusus');
             $table->string('tb');
             $table->string('bb');
-            // Riwayat Pendidikan
-            // TK
-            $table->string('nama_tk');
-            $table->string('tanggal_ijazah_tk');
-            $table->string('ijazah_tk');
-            $table->string('ujian_tk');
+            
+            // Hobi Siswa
+            $table->string('kesenian');
+            $table->string('olahraga');
+            $table->string('organisasi');
+            $table->string('hobi_lain');
+            // Lainnya
+            $table->string('kelayakan_pip');
+            $table->string('alasan_pip');
+            $table->string('kode_bank');
+            $table->string('no_rekening');
+            $table->string('nama_rekening');
+            $table->string('kps');
+            $table->string('no_kps');
+            $table->string('kks');
+            $table->string('no_kip');
+            $table->string('nama_kip');
+            $table->string('no_kks');
             $table->timestamps();
             
         });
