@@ -22,22 +22,26 @@ class PendidikanSiswa extends Migration
             $table->string('tanggal_ijazah_tk');
             $table->string('ijazah_tk');
             $table->string('ujian_tk');
-            $table->string('tk_negri');
-            $table->string('tk_swasta');
+            $table->string('tk_type');
             // SD
             $table->string('nama_sd');
             $table->string('tanggal_ijazah_sd');
             $table->string('ijazah_sd');
             $table->string('ujian_sd');
-            $table->string('sd_negri');
-            $table->string('sd_swasta');
+            $table->string('sd_type');
             // SMP
             $table->string('nama_smp');
             $table->string('tanggal_ijazah_smp');
             $table->string('ijazah_smp');
             $table->string('ujian_smp');
             $table->string('smp_negri');
-            $table->string('smp_swasta');
+            $table->string('smp_type');
+            // SMA
+            // $table->string('nama_sma');
+            // $table->string('tanggal_ijazah_sma');
+            // $table->string('ijazah_sma');
+            // $table->string('ujian_sma');
+            // $table->string('sma_type');
             // Pindahan
             $table->string('pindahan_type');
             $table->string('alasan_pindah');

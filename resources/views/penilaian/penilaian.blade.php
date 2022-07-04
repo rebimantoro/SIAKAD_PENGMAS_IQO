@@ -39,10 +39,16 @@
                         <div class="col-md-3 px-3 pt-2">
                             <select class="form-select" aria-label="Pilih Kelas">
                             <option selected>-- Pilih Kelas --</option>
+                            @foreach ($kelas as $kl )
+                                <option value="{{$kl->id}}">{{$kl->nama_kelas}}</option>
+                            @endforeach
+                            </select>
+                            {{-- <select class="form-select" aria-label="Pilih Kelas">
+                            <option selected>-- Pilih Kelas --</option>
                             <option value="1">10 A TKJ</option>
                             <option value="2">11 B TKJ</option>
                             <option value="3">12 Akuntansi</option>
-                            </select>
+                            </select> --}}
                         </div>
 
                         <div class="col-md-3 px-3 pt-2">

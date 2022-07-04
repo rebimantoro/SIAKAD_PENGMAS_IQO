@@ -19,14 +19,14 @@ class CreateSiswaTable extends Migration
             $table->string('akte_siswa');
             $table->string('kk_siswa');
             $table->string('nisn_siswa');
-            $table->string('nama_lengkap_siswa');
-            $table->string('nama_panggilan_siswa');
-            $table->string('jenis_kelamin_siswa');
-            $table->string('tempat_lahir_siswa');
-            $table->date('tanggal_lahir_siswa');
-            $table->string('agama_siswa');
-            $table->string('kewarganegaraan_siswa');
-            $table->string('bahasa_siswa');
+            $table->string('nama_lengkap');
+            $table->string('nama_panggilan');
+            $table->string('jenis_kelamin');
+            $table->string('tempat_lahir');
+            $table->date('tanggal_lahir');
+            $table->string('agama');
+            $table->string('kewarganegaraan');
+            $table->string('bahasa');
             // Hubungan Keluarga
             $table->string('status_keluarga');
             $table->string('status_anak');

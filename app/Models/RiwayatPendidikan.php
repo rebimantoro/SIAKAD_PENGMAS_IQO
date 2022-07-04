@@ -11,6 +11,7 @@ class RiwayatPendidikan extends Model
     use HasFactory;
     
     protected $fillable = [
+        'id_siswa',
         // SD
         'nama_sd',
         'kota_sd',

@@ -73,7 +73,7 @@
                             </div>
 
                         </div>
-                        <div class="card-body">
+                       <div class="card-body">
 
                             <div class="table-responsive">
                                 <table class="table">
@@ -134,7 +134,7 @@
                                             </td>
                                         </tr>
 
-                                        <tr>
+                                        {{--  <tr>
                                             <td>2</td>
                                             <td>
                                                 <div>
@@ -377,7 +377,7 @@
                                                         <option value="abdullah">0057 - Abdullah Musa, S.Pd</option>
                                                     </select>
                                                 </div>
-                                            </td>
+                                            </td> --}}
                                         </tr>
 
                                     </tbody>
