@@ -6,6 +6,7 @@ use App\Models\keluargaSiswa;
 use App\Models\pendidikanSiswa;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdminKesiswaanController extends Controller
 {
@@ -186,7 +187,7 @@ class AdminKesiswaanController extends Controller
         $siswa->tanggal_belajar = $request->input('tanggal_belajar');
         $siswa->ijazah = $request->input('ijazah');
         $siswa->skhun = $request->input('skhun');
-        $siswa->foto = $request->input('foto');
+        $siswa->foto = Storage::disk('public')->put('siswa', $request->file('foto'));
         $siswa->provinsi = $request->input('provinsi');
         $siswa->kab_kota = $request->input('kab_kota');
         $siswa->kecamatan = $request->input('kecamatan');
@@ -229,26 +230,22 @@ class AdminKesiswaanController extends Controller
         $pendidikan->tanggal_ijazah_tk = $request->input('tanggal_ijazah_tk');
         $pendidikan->ijazah_tk = $request->input('ijazah_tk');
         $pendidikan->ujian_tk = $request->input('ujian_tk');
-        $pendidikan->tk_negri = $request->input('tk_negri');
-        $pendidikan->tk_swasta = $request->input('tk_swasta');
+        $pendidikan->tk_type = $request->input('tk_type');
         $pendidikan->nama_sd = $request->input('nama_sd');
         $pendidikan->tanggal_ijazah_sd = $request->input('tanggal_ijazah_sd');
-        $pendidikan->ijazah_sd = $request->input('ijazah_sd');
+        $pendidikan->ijazah_sd = $request->input('ijazah-sd');
         $pendidikan->ujian_sd = $request->input('ujian_sd');
-        $pendidikan->sd_negri = $request->input('sd_negri');
-        $pendidikan->sd_swasta = $request->input('sd_swasta');
+        $pendidikan->sd_type = $request->input('sd_type');
         $pendidikan->nama_smp = $request->input('nama_smp');
         $pendidikan->tanggal_ijazah_smp = $request->input('tanggal_ijazah_smp');
         $pendidikan->ijazah_smp = $request->input('ijazah_smp');
         $pendidikan->ujian_smp = $request->input('ujian_smp');
-        $pendidikan->smp_negri = $request->input('smp_negri');
-        $pendidikan->smp_swasta = $request->input('smp_swasta');
-        $pendidikan->nama_sma = $request->input('nama_sma');
-        $pendidikan->tanggal_ijazah_sma = $request->input('tanggal_ijazah_sma');
-        $pendidikan->ijazah_sma = $request->input('ijazah_sma');
-        $pendidikan->ujian_sma = $request->input('ujian_sma');
-        $pendidikan->sma_negri = $request->input('sma_negri');
-        $pendidikan->sma_swasta = $request->input('sma_swasta');
+        $pendidikan->smp_type = $request->input('smp_type');
+        // $pendidikan->nama_sma = $request->input('nama_sma');
+        // $pendidikan->tanggal_ijazah_sma = $request->input('tanggal_ijazah_sma');
+        // $pendidikan->ijazah_sma = $request->input('ijazah_sma');
+        // $pendidikan->ujian_sma = $request->input('ujian_sma');
+        // $pendidikan->sma_type = $request->input('sma_type');
         $pendidikan->pindahan_type = $request->input('pindahan_type');
         $pendidikan->alasan_pindah = $request->input('alasan_pindah');
         $pendidikan->no_surat_pindah = $request->input('no_surat_pindah');

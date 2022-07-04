@@ -57,6 +57,17 @@ active
                         </li>
                     </ul>
 
+                    <form method="POST" action="{{ route('tambah-siswa') }}" autocomplete="off" enctype="multipart/form-data">
+                    @csrf
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="tab-content pt-2" id="borderedTabContent">
                         <!-- Data Siswa -->
                         <div class="tab-pane fade show active" id="bordered-siswa" role="tabpanel" aria-labelledby="siswa-tab">
@@ -465,14 +476,14 @@ active
                                     <div class="pt-2 px-2 mb-2">
                                         <label>Status Sekolah Sebelumnya</label>
                                         <div name="tk_negri" class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
-                                            <label class="form-check-label" for="gridRadios1">
+                                            <input class="form-check-input" type="radio" name="tk_type" id="tk_negri1" value="tk-negri">
+                                            <label class="form-check-label" for="tk_type">
                                                 Negeri
                                             </label>
                                         </div>
                                         <div name="tk_swasta" class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
+                                            <input class="form-check-input" type="radio" name="tk_type" id="tk_type2" value="tk-swasta">
+                                            <label class="form-check-label" for="tk_type">
                                                 Swasta
                                             </label>
                                         </div>
@@ -515,14 +526,14 @@ active
                                     <div class="pt-2 px-2 mb-2">
                                         <label>Status Sekolah Sebelumnya</label>
                                         <div name="sd_negri" class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
-                                            <label class="form-check-label" for="gridRadios1">
+                                            <input class="form-check-input" type="radio" name="sd_type" id="sd_negri1" value="sd-negri">
+                                            <label class="form-check-label" for="sd_type">
                                                 Negeri
                                             </label>
                                         </div>
                                         <div name="sd_swasta" class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
+                                            <input class="form-check-input" type="radio" name="sd_type" id="sd_type2" value="sd-swasta">
+                                            <label class="form-check-label" for="sd_type">
                                                 Swasta
                                             </label>
                                         </div>
@@ -565,22 +576,19 @@ active
                                     <div class="pt-2 px-2 mb-2">
                                         <label>Status Sekolah Sebelumnya</label>
                                         <div name="smp_negri" class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
-                                            <label class="form-check-label" for="gridRadios1">
+                                            <input class="form-check-input" type="radio" name="smp_type" id="smp_negri1" value="smp-negri">
+                                            <label class="form-check-label" for="smp_type">
                                                 Negeri
                                             </label>
                                         </div>
-                                        <div name="sd_swasta" class="form-check">
-                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                            <label class="form-check-label" for="gridRadios2">
+                                        <div name="smp_swasta" class="form-check">
+                                            <input class="form-check-input" type="radio" name="smp_type" id="smp_type2" value="smp-swasta">
+                                            <label class="form-check-label" for="smp_type">
                                                 Swasta
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-
-                                
-
                         </div>
 
                         <!-- pindahan -->
@@ -1146,7 +1154,9 @@ active
                                     <button type="submit" class="btn btn-submit rounded-pill ms-2">Submit</button>
                                 </div>
                         </div>
-                    </div><!-- End Bordered Tabs -->
+                    </div>
+                    <!-- End of Bordered Tabs -->       
+                    </form>
 
                     </div>
                 </div>

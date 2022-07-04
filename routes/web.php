@@ -6,6 +6,8 @@ use App\Http\Controllers\AdminKesiswaanController;
 use App\Http\Controllers\AdminKurikulumController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\PenilaianController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -86,9 +88,7 @@ Route::post('/siswa/tambah-siswa', [AdminKesiswaanController::class, 'createData
 Route::get('/siswa/data-siswa', [AdminKesiswaanController::class, 'showDataSiswa'])->name('data-siswa');
 
 // penilaian
-Route::get('/penilaian', function () {
-    return view('penilaian.penilaian');
-})->name('penilaian');
+Route::get('/penilaian', [PenilaianController::class, 'index'])->name('penilaian');
 
 // raport
 Route::get('/raport/data-raport', function () {

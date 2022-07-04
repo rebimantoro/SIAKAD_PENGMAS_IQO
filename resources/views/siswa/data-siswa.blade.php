@@ -54,7 +54,13 @@
                                     </thead>
 
                                     <tbody>
-
+                                        @if($siswa->empty())
+                                            <tr>
+                                                <td colspan="8" class="text-center">
+                                                    <h1>Data Kosong</h1>
+                                                </td>
+                                            </tr>
+                                        @else
                                         @foreach ($siswa as $sw)
                                             <tr>
                                                 <td>{{$sw->id }}</td>
@@ -81,6 +87,7 @@
                                                 </td>
                                             </tr>
                                         @endforeach
+                                        @endif
 
                                     </tbody>
                                 </table>
