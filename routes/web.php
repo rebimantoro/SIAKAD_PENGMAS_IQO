@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminKelasController;
 use App\Http\Controllers\AdminKepegawaianController;
+use App\Http\Controllers\AdminKesiswaanController;
 use App\Http\Controllers\AdminKurikulumController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
@@ -81,7 +82,8 @@ Route::get('/mapel/data-mapel',[AdminKurikulumController::class, 'showMapel'])->
 Route::get('/siswa/tambah-siswa', function () {
     return view('siswa.tambah-siswa');
 })->name('tambah-siswa');
-Route::get('/siswa/data-siswa', [AdminKelasController::class, 'showDataSiswa'])->name('data-siswa');
+Route::post('/siswa/tambah-siswa', [AdminKesiswaanController::class, 'createDataSiswa'])->name('tambah-siswa');
+Route::get('/siswa/data-siswa', [AdminKesiswaanController::class, 'showDataSiswa'])->name('data-siswa');
 
 // penilaian
 Route::get('/penilaian', function () {

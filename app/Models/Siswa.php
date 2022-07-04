@@ -14,6 +14,7 @@ class Siswa extends Model
         'nik',
         'akte',
         'kk',
+        'nisn_siswa',
         'nama_lengkap',
         'nama_panggilan',
         'jenis_kelamin',

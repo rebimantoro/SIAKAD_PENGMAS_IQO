@@ -258,4 +258,19 @@ class AdminKepegawaianController extends Controller
 
     }
 
+    /**
+     * Delete Pegawai
+     * 
+     * @return Response
+     */
+    public function deletePegawai(Request $request) {
+        $id = $request->input('id');
+        $dataPegawai = DataPegawai::find($id);
+        $dataPegawai->delete();
+        return redirect()->back()->with('success', 'Data Pegawai berhasil dihapus');
+    }
+
+    
+
+
 }

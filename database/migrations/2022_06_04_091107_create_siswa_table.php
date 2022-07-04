@@ -18,6 +18,7 @@ class CreateSiswaTable extends Migration
             $table->string('nik');
             $table->string('akte_siswa');
             $table->string('kk_siswa');
+            $table->string('nisn_siswa');
             $table->string('nama_lengkap_siswa');
             $table->string('nama_panggilan_siswa');
             $table->string('jenis_kelamin_siswa');

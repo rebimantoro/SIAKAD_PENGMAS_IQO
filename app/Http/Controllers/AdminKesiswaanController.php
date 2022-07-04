@@ -19,6 +19,7 @@ class AdminKesiswaanController extends Controller
             'nik' => 'required',
             'akte' => 'required',
             'kk' => 'required',
+            'nisn' => 'required',
             'nama_lengkap' => 'required',
             'jenis_kelamin' => 'required',
             'tempat_lahir' => 'required',
@@ -166,6 +167,7 @@ class AdminKesiswaanController extends Controller
         $siswa->nik = $request->input('nik');
         $siswa->akte = $request->input('akte');
         $siswa->kk = $request->input('kk');
+        $siswa->nisn_siswa = $request->input('nisn');
         $siswa->nama_lengkap = $request->input('nama_lengkap');
         $siswa->jenis_kelamin = $request->input('jenis_kelamin');
         $siswa->tempat_lahir = $request->input('tempat_lahir');
@@ -182,9 +184,6 @@ class AdminKesiswaanController extends Controller
         $siswa->status_pendaftaran = $request->input('status_pendaftaran');
         $siswa->tahun_akademik = $request->input('tahun_akademik');
         $siswa->tanggal_belajar = $request->input('tanggal_belajar');
-        $siswa->nisn = $request->input('nisn');
-        $siswa->akte = $request->input('akte');
-        $siswa->kk = $request->input('kk');
         $siswa->ijazah = $request->input('ijazah');
         $siswa->skhun = $request->input('skhun');
         $siswa->foto = $request->input('foto');

@@ -41,16 +41,15 @@
                                         <tr>
 
                                             <th scope="col">No</th>
-                                            <th scope="col">NIS</th>
                                             <th scope="col">NISN</th>
                                             <th scope="col">Nama Siswa</th>
                                             <th scope="col">Jenis Kelamin</th>
                                             <th scope="col">Tempat, Tanggal Lahir</th>
-                                            <th scope="col">Status</th>
+                                            {{-- <th scope="col">Status</th>
                                             <th scope="col">Tanggal Masuk</th>
                                             <th scope="col">Kelas</th>
                                             <th scope="col">Foto</th>
-                                            <th scope="col">Aksi</th>
+                                            <th scope="col">Aksi</th> --}}
                                         </tr>
                                     </thead>
 
@@ -59,14 +58,14 @@
                                         @foreach ($siswa as $sw)
                                             <tr>
                                                 <td>{{$sw->id }}</td>
-                                                <td> 1617210001 </td>
-                                                <td> </td>
-                                                <td> Aditya Faisal Rizki </td>
-                                                <td> Laki-Laki </td>
-                                                <td> Bogor , 08 September 2004</td>
-                                                <td> Aktif </td>
+                                                <td>{{$sw->nisn_siswa}}</td>
+                                                <td>{{$sw->nama_lengkap}}</td>
+                                                <td>{{$sw->jenis_kelamin}}</td>
+                                                <td>{{$sw->tempat_lahir}}</td>
+                                                <td>{{$sw->tanggal_lahir}}</td>
+                                                {{-- <td> Aktif </td>
                                                 <td> 23 Juni 2019 </td>
-                                                <td> X A TKJ (TKJ) </td>
+                                                <td> X A TKJ (TKJ) </td> --}}
                                                 <td> <img src="{{ asset('assets/img/profile-img.jpg') }}" width="50"
                                                         alt="Profile" class="rounded-circle"></td>
 
