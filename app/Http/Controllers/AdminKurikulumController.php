@@ -90,10 +90,6 @@ class AdminKurikulumController extends Controller
         $mapel->nama_mapel = $request->input('nama_mapel');
         $mapel->kelompok_mapel = $request->input('kelompok_mapel');
         $mapel->desc_mapel = $request->input('desc_mapel');
-        // find nama_pegawai from DataPegawai
-        $mapel->nama_pegawai = DataPegawai::where('nama_pegawai', $request->input('nama_guru'))->first()->nama_pegawai;
-        // assign mapel to multiple kelas on kelas table
-        $mapel->kelas = $request->input('kelas');
         $mapel->status_mapel = $request->input('status_mapel');
         $mapel->save();
 

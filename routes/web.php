@@ -68,7 +68,7 @@ Route::get('/mapel/data-mapel/detail', function () {
 Route::get('/mapel/plotting-mapel', function () {
     return view('mapel.plotting-mapel');
 })->name('plotting-mapel');
-Route::get('/kelas/data-kelas', [AdminKurikulumController::class, 'showMapel'])->name('data-kelas');
+
 
 Route::get('/mapel/plotting-mapel', [AdminKurikulumController::class, 'plotting'])->name('plotting-mapel');
 Route::post('/mapel/tambah-mapel', [AdminKurikulumController::class, 'createMataPelajaran'])->name('tambah-mapel');

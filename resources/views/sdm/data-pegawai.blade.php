@@ -57,7 +57,7 @@
                                         <tr>
                                             <td>{{$p->id}}</td>
                                             {{-- Show Images --}}
-                                            <td><img src="{{ asset('Template/images/'.$p->foto) }}" width="50"
+                                            <td><img src="{{ asset('/resource/storage/app/public'.$p->foto) }}" width="50"
                                                     class="rounded-circle"></td>
                                             <td>{{ $p->nik_dt }}</td>
                                             <td>{{ $p->no_ktp }}</td>
