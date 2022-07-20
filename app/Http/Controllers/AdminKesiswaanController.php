@@ -7,6 +7,7 @@ use App\Models\pendidikanSiswa;
 use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 class AdminKesiswaanController extends Controller
 {
@@ -16,6 +17,7 @@ class AdminKesiswaanController extends Controller
      */
     public function createDataSiswa(Request $request)
     {
+        // return $request;
         $request->validate([
             'nik' => 'required',
             'akte' => 'required',
@@ -168,8 +170,14 @@ class AdminKesiswaanController extends Controller
         $siswa->nik = $request->input('nik');
         $siswa->akte = $request->input('akte');
         $siswa->kk = $request->input('kk');
-        $siswa->nisn_siswa = $request->input('nisn');
+        $siswa->nisn = $request->input('nisn');
+        $siswa->nisn_siswa = $request->input('nisn_siswa');
+        $siswa->akte_siswa = $request->input('akte_siswa');
+        $siswa->kk_siswa = $request->input('kk_siswa');
+        $siswa->ijazah_siswa = Storage::disk('public')->put('ijazah', $request->file('ijazah_siswa'));
+        $siswa->skhun_siswa = Storage::disk('public')->put('skhun', $request->file('skhun_siswa'));
         $siswa->nama_lengkap = $request->input('nama_lengkap');
+        $siswa->nama_panggilan = $request->input('nama_panggilan');
         $siswa->jenis_kelamin = $request->input('jenis_kelamin');
         $siswa->tempat_lahir = $request->input('tempat_lahir');
         $siswa->tanggal_lahir = $request->input('tanggal_lahir');
@@ -225,7 +233,10 @@ class AdminKesiswaanController extends Controller
         $siswa->no_kks = $request->input('no_kks');
         $siswa->save();
         
+        $id_siswa = $siswa->id;
+        
         $pendidikan = new pendidikanSiswa();
+        $pendidikan->id_siswa = $id_siswa;
         $pendidikan->nama_tk = $request->input('nama_tk');
         $pendidikan->tanggal_ijazah_tk = $request->input('tanggal_ijazah_tk');
         $pendidikan->ijazah_tk = $request->input('ijazah_tk');
@@ -241,18 +252,15 @@ class AdminKesiswaanController extends Controller
         $pendidikan->ijazah_smp = $request->input('ijazah_smp');
         $pendidikan->ujian_smp = $request->input('ujian_smp');
         $pendidikan->smp_type = $request->input('smp_type');
-        // $pendidikan->nama_sma = $request->input('nama_sma');
-        // $pendidikan->tanggal_ijazah_sma = $request->input('tanggal_ijazah_sma');
-        // $pendidikan->ijazah_sma = $request->input('ijazah_sma');
-        // $pendidikan->ujian_sma = $request->input('ujian_sma');
-        // $pendidikan->sma_type = $request->input('sma_type');
         $pendidikan->pindahan_type = $request->input('pindahan_type');
         $pendidikan->alasan_pindah = $request->input('alasan_pindah');
         $pendidikan->no_surat_pindah = $request->input('no_surat_pindah');
         $pendidikan->sekolah_asal = $request->input('sekolah_asal');
         $pendidikan->alamat_sekolah_asal = $request->input('alamat_sekolah_asal');
         $pendidikan->save();
+
         $ortu = new keluargaSiswa;
+        $ortu->id_siswa = $id_siswa;
         $ortu->nama_ayah = $request->input('nama_ayah');
         $ortu->nik_ayah = $request->input('nik_ayah');
         $ortu->tempat_lahir_ayah = $request->input('tempat_lahir_ayah');
@@ -299,6 +307,7 @@ class AdminKesiswaanController extends Controller
         $ortu->penghasilan_wali = $request->input('penghasilan_wali');
         $ortu->nrp_wali = $request->input('nrp_wali');
         $ortu->save();
+
         return redirect()->back()->with('success', 'Data Siswa berhasil ditambahkan');
     }
 
@@ -308,9 +317,34 @@ class AdminKesiswaanController extends Controller
      * @return Response
      */
     public function showDataSiswa(Request $request) {
-        $siswa = Siswa::all();
+        $siswas = Siswa::all();
         $pendidikan = pendidikanSiswa::all();
         $ortu = keluargaSiswa::all();
-        return view('siswa.data-siswa', compact('siswa', 'pendidikan', 'ortu'));
+        return view('siswa.data-siswa', compact('siswas', 'pendidikan', 'ortu'));
     }
+
+    public function detailDataSiswa(Request $request){
+        $id_siswa = $request->input('id_siswa');
+        $siswas = Siswa::where('id_siswa', $id_siswa)->first();
+        $pendidikan = pendidikanSiswa::where('id_siswa', $id_siswa)->first();
+        $ortu = keluargaSiswa::where('id_siswa', $id_siswa)->first();
+        return view('siswa.detail-siswa', compact('siswas', 'pendidikan', 'ortu'));
+    }
+
+    public function deleteDataSiswa(Request $request){
+        $id_siswa = $request->input('id_siswa');
+        $siswas = Siswa::where('id_siswa', $id_siswa)->first();
+        
+        unlink(storage_path('app/public/'.$siswas->foto));
+        unlink(storage_path('app/public/'.$siswas->ijazah_siswa));
+        unlink(storage_path('app/public/'.$siswas->skhun_siswa));
+        
+        DB::table('siswa')->where('id_siswa', $id_siswa)->delete();
+        DB::table('pendidikan_siswa')->where('id_siswa', $id_siswa)->delete();
+        DB::table('keluarga_siswa')->where('id_siswa', $id_siswa)->delete();
+        
+
+        return redirect()->back()->with('delete', 'Data Siswa berhasil dihapus');
+    }
+
 }

@@ -54,16 +54,18 @@
                                     </thead>
 
                                     <tbody>
-                                        @if($siswa->empty())
+                                        @if($siswas->isEmpty())
                                             <tr>
                                                 <td colspan="8" class="text-center">
                                                     <h1>Data Kosong</h1>
                                                 </td>
                                             </tr>
                                         @else
-                                        @foreach ($siswa as $sw)
+                                        @php $no = 1; @endphp
+                                        @foreach ($siswas as $sw)
                                             <tr>
-                                                <td>{{$sw->id }}</td>
+                                                <td>{{$no}}</td>
+                                                @php $no++; @endphp
                                                 <td>{{$sw->nisn_siswa}}</td>
                                                 <td>{{$sw->nama_lengkap}}</td>
                                                 <td>{{$sw->jenis_kelamin}}</td>
@@ -77,9 +79,11 @@
 
                                                 <td>
                                                     <div class="d-flex flex-row bd-highlight">
-                                                        <a href="" class="btn btn-detail rounded-pill">Detail</a>
-                                                        <form action="" method="POST">
-
+                                                        <a href="/siswa/detail-siswa?id_siswa={{$sw->id_siswa}}" class="btn btn-detail rounded-pill">Detail</a>
+                                                        <form action="/siswa/data-siswa" method="POST">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <input type="hidden" name="id_siswa" value="{{$sw->id_siswa}}">
                                                             <button type="submit"
                                                                 class="btn btn-delete rounded-pill ms-2">Delete</button>
                                                         </form>

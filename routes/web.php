@@ -86,6 +86,8 @@ Route::get('/siswa/tambah-siswa', function () {
 })->name('tambah-siswa');
 Route::post('/siswa/tambah-siswa', [AdminKesiswaanController::class, 'createDataSiswa'])->name('tambah-siswa');
 Route::get('/siswa/data-siswa', [AdminKesiswaanController::class, 'showDataSiswa'])->name('data-siswa');
+Route::get('/siswa/detail-siswa', [AdminKesiswaanController::class, 'detailDataSiswa'])->name('detail-siswa');
+Route::delete('/siswa/data-siswa', [AdminKesiswaanController::class, 'deleteDataSiswa'])->name('delete-siswa');
 
 // penilaian
 Route::get('/penilaian', [PenilaianController::class, 'index'])->name('penilaian');
