@@ -9,6 +9,8 @@ use App\Models\RiwayatPendidikan;
 use App\Models\PengalamanBekerja;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
+
 
 
 class AdminKepegawaianController extends Controller
@@ -249,7 +251,8 @@ class AdminKepegawaianController extends Controller
      * 
      * @return Response
      */
-    public function showDataPegawai(Request $request) {
+    public function showDataPegawai(Request $request)
+    {
 
         // show data pegawai with specific collumn
         $dataPegawai = DataPegawai::all();
@@ -263,14 +266,19 @@ class AdminKepegawaianController extends Controller
      * 
      * @return Response
      */
-    public function deletePegawai(Request $request) {
-        $id = $request->input('id');
-        $dataPegawai = DataPegawai::find($id);
-        $dataPegawai->delete();
+    public function deletePegawai(Request $request)
+    {
+        $id_pegawai = $request->input('id');
+        $dataPegawai = DataPegawai::where('id', $id_pegawai)->first();
+
+        // remove foto pegawai from storage
+        unlink(storage_path('app/public/' . $dataPegawai->foto));
+
+        DB::table('data_pegawai')->where('id', $id_pegawai)->delete();
+        DB::table('kartu_keluarga')->where('id_user', $id_pegawai)->delete();
+        DB::table('riwayat_pendidikan')->where('id_user', $id_pegawai)->delete();
+        DB::table('pengalaman_bekerja')->where('id_user', $id_pegawai)->delete();
+
         return redirect()->back()->with('success', 'Data Pegawai berhasil dihapus');
     }
-
-    
-
-
 }

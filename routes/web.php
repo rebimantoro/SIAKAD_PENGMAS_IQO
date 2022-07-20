@@ -42,6 +42,7 @@ Route::get('/SDM/tambah-pegawai', function () {
 })->name('tambah-pegawai');
 Route::post('/SDM/tambah-pegawai', [AdminKepegawaianController::class, 'createDataPegawai'])->name('tambah-pegawai');
 Route::get('/SDM/data-pegawai', [AdminKepegawaianController::class, 'showDataPegawai'])->name('data-pegawai');
+Route::delete('/SDM/data-pegawai', [AdminKepegawaianController::class, 'deletePegawai'])->name('delete-pegawai');
 
 // kelas
 // Route::get('/kelas/data-kelas', function () {

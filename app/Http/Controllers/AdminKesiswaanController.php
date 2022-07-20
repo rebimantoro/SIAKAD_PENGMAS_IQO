@@ -232,9 +232,9 @@ class AdminKesiswaanController extends Controller
         $siswa->nama_kip = $request->input('nama_kip');
         $siswa->no_kks = $request->input('no_kks');
         $siswa->save();
-        
+
         $id_siswa = $siswa->id;
-        
+
         $pendidikan = new pendidikanSiswa();
         $pendidikan->id_siswa = $id_siswa;
         $pendidikan->nama_tk = $request->input('nama_tk');
@@ -316,14 +316,16 @@ class AdminKesiswaanController extends Controller
      * 
      * @return Response
      */
-    public function showDataSiswa(Request $request) {
+    public function showDataSiswa(Request $request)
+    {
         $siswas = Siswa::all();
         $pendidikan = pendidikanSiswa::all();
         $ortu = keluargaSiswa::all();
         return view('siswa.data-siswa', compact('siswas', 'pendidikan', 'ortu'));
     }
 
-    public function detailDataSiswa(Request $request){
+    public function detailDataSiswa(Request $request)
+    {
         $id_siswa = $request->input('id_siswa');
         $siswas = Siswa::where('id_siswa', $id_siswa)->first();
         $pendidikan = pendidikanSiswa::where('id_siswa', $id_siswa)->first();
@@ -331,20 +333,20 @@ class AdminKesiswaanController extends Controller
         return view('siswa.detail-siswa', compact('siswas', 'pendidikan', 'ortu'));
     }
 
-    public function deleteDataSiswa(Request $request){
+    public function deleteDataSiswa(Request $request)
+    {
         $id_siswa = $request->input('id_siswa');
         $siswas = Siswa::where('id_siswa', $id_siswa)->first();
-        
-        unlink(storage_path('app/public/'.$siswas->foto));
-        unlink(storage_path('app/public/'.$siswas->ijazah_siswa));
-        unlink(storage_path('app/public/'.$siswas->skhun_siswa));
-        
+
+        unlink(storage_path('app/public/' . $siswas->foto));
+        unlink(storage_path('app/public/' . $siswas->ijazah_siswa));
+        unlink(storage_path('app/public/' . $siswas->skhun_siswa));
+
         DB::table('siswa')->where('id_siswa', $id_siswa)->delete();
         DB::table('pendidikan_siswa')->where('id_siswa', $id_siswa)->delete();
         DB::table('keluarga_siswa')->where('id_siswa', $id_siswa)->delete();
-        
+
 
         return redirect()->back()->with('delete', 'Data Siswa berhasil dihapus');
     }
-
 }

@@ -54,7 +54,8 @@ class AdminKurikulumController extends Controller
      * 
      * @return Response
      */
-    public function kelas() {
+    public function kelas()
+    {
         $pegawai = DataPegawai::all();
         // dd($pegawai);
         return view('kelas.tambah-kelas', compact('pegawai'));
@@ -65,7 +66,8 @@ class AdminKurikulumController extends Controller
      * 
      * @return Response
      */
-    public function showKelas() {
+    public function showKelas()
+    {
         $kelas1 = Kelas::get();
         // dd($kelas);
         return view('kelas.data-kelas', compact('kelas1'));
@@ -101,7 +103,8 @@ class AdminKurikulumController extends Controller
      * 
      * @return Response
      */
-    public function showMapel() {
+    public function showMapel()
+    {
         $dataMapel = MataPelajaran::all();
         return view('mapel.data-mapel', compact('dataMapel'));
     }
@@ -111,7 +114,8 @@ class AdminKurikulumController extends Controller
      * 
      * @return Response
      */
-    public function createPlottingPelajaran(Request $request) {
+    public function createPlottingPelajaran(Request $request)
+    {
 
         $request->validate([
             'hari' => 'required',
@@ -123,7 +127,7 @@ class AdminKurikulumController extends Controller
         ]);
 
         $plotting = new Plotting;
-        
+
         $id_kelas = Kelas::find('id')->id;
         $id_mapel = MataPelajaran::find('id')->id;
         $id_guru = DataPegawai::find('id')->id;
@@ -146,7 +150,8 @@ class AdminKurikulumController extends Controller
      * 
      * @return Response
      */
-    public function plotting(Request $request) {
+    public function plotting(Request $request)
+    {
         $kelas = Kelas::all();
         $mapel = MataPelajaran::all();
         $guru = DataPegawai::all();
