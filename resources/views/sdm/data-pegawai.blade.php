@@ -76,7 +76,7 @@
                                                     <form action="" method="POST">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <input type="hidden" name="id_siswa" value="{{$p->id}}">
+                                                        <input type="hidden" name="id" value="{{$p->id}}">
                                                         <button type="submit"
                                                             class="btn btn-delete rounded-pill ms-2">Delete</button>
                                                     </form>
